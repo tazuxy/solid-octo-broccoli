@@ -1,0 +1,25 @@
+variant,criterion,value,threshold,result
+H-A a,"(1) ann. net return, 4 cells (8% vol)","A-IS +1.20%, A-OOS +0.79%, B-IS -0.40%, B-OOS -0.21%",all > 0,FAIL
+H-A a,"(2) t weekly, A+B",0.16,>= 2.0,FAIL
+H-A a,"(3) cum / maxDD, A+B @8%",+0.6% / -28.5% = 0.02,>= 3,FAIL
+H-A a,"(4) vs buy&hold: Sharpe, maxDD","A: SR 0.12 vs 0.31, DD -27.3% vs -25.3%; B: SR -0.04 vs 0.08, DD -28.7% vs -28.9%","better on both, both groups",FAIL
+H-A a,(5) costs x2: (1)-(3),"A-IS +1.11%, A-OOS +0.70%, B-IS -0.48%, B-OOS -0.31%; t 0.12; ratio -0.03",(1)-(3) hold,FAIL
+H-A a,OVERALL,,,FAIL
+H-A b,"(1) ann. net return, 4 cells (8% vol)","A-IS -2.00%, A-OOS -0.12%, B-IS -0.43%, B-OOS -2.56%",all > 0,FAIL
+H-A b,"(2) t weekly, A+B",-0.61,>= 2.0,FAIL
+H-A b,"(3) cum / maxDD, A+B @8%",-19.9% / -32.9% = -0.60,>= 3,FAIL
+H-A b,"(4) vs buy&hold: Sharpe, maxDD","A: SR -0.13 vs 0.31, DD -36.4% vs -25.3%; B: SR -0.19 vs 0.08, DD -31.3% vs -28.9%","better on both, both groups",FAIL
+H-A b,(5) costs x2: (1)-(3),"A-IS -2.18%, A-OOS -0.27%, B-IS -0.60%, B-OOS -2.71%; t -0.69; ratio -0.63",(1)-(3) hold,FAIL
+H-A b,OVERALL,,,FAIL
+H-B a,"(1) avg net R: IS, OOS, pairs>0","IS -0.014, OOS -0.064; AUDUSD -0.079, EURUSD +0.004, GBPUSD -0.049, USDJPY -0.020","IS>0, OOS>0, >=3/4 pairs",FAIL
+H-B a,(2) pooled t,-1.27,>= 2.0,FAIL
+H-B a,(3) sumR / abs(maxDD_R),-22.7 / -35.6 = -0.64,>= 3,FAIL
+H-B a,(4) N,587,>= 100,PASS
+H-B a,(5) costs x1.5: (1)-(3),"IS -0.027, OOS -0.080, pairs+ 0; t -1.75; ratio -0.72",(1)-(3) hold,FAIL
+H-B a,OVERALL,,,FAIL
+H-B b,"(1) avg net R: IS, OOS, pairs>0","IS -0.105, OOS +0.102; AUDUSD +0.165, EURUSD -0.180, GBPUSD -0.007, USDJPY -0.040","IS>0, OOS>0, >=3/4 pairs",FAIL
+H-B b,(2) pooled t,-0.05,>= 2.0,FAIL
+H-B b,(3) sumR / abs(maxDD_R),-2.3 / -62.3 = -0.04,>= 3,FAIL
+H-B b,(4) N,587,>= 100,PASS
+H-B b,(5) costs x1.5: (1)-(3),"IS -0.118, OOS +0.086, pairs+ 1; t -0.23; ratio -0.17",(1)-(3) hold,FAIL
+H-B b,OVERALL,,,FAIL
