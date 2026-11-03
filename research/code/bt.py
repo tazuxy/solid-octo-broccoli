@@ -9,6 +9,7 @@ PIP = {'EURUSD':1e-4,'GBPUSD':1e-4,'AUDUSD':1e-4,'NZDUSD':1e-4,'USDCAD':1e-4,'US
 COST_PIPS = {'EURUSD':1.0,'GBPUSD':1.5,'USDJPY':1.0,'AUDUSD':1.2,'USDCAD':1.8,'USDCHF':1.8,'NZDUSD':1.8,'XAUUSD':30,
              'EURJPY':1.5,'GBPJPY':2.5,'AUDJPY':1.8,'CADJPY':2.2,'NZDJPY':2.5,'EURGBP':1.3,'EURAUD':2.5,'EURCHF':1.8,'AUDNZD':2.5,'GBPCHF':2.5}
 TF_MIN = {'M15':15,'H1':60,'H4':240,'D1':1440}
+BUILD_FROM = '2012-01-01'   # first bar returned by build(); round-2 parametrisation (default = rounds 0-1)
 
 def htf_feature(df, pair, tf_hi, fn):
     """Compute features on a higher timeframe and align to df without look-ahead."""
@@ -96,7 +97,7 @@ def build(pair, tf, **sigkw):
         f = htf_feature(df, pair, tfh, fn)
         for col in f.columns: df[col] = f[col].values
     df['pair'] = pair
-    return df[df.index >= '2012-01-01']
+    return df[df.index >= BUILD_FROM]
 
 def simulate(df, pair, idx, direction, sl_atr=1.0, tp_mode='mid', tp_atr=1.5, max_bars=32, cost_pips=None,
              allow_overlap=True, be_trigger=None):

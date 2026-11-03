@@ -4,7 +4,7 @@ import sys, zipfile, io, glob, os
 import pandas as pd, numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, 'data'); OUT = os.path.join(ROOT, 'bars')
+DATA = os.path.join(ROOT, os.environ.get('DATA_DIR', 'data')); OUT = os.path.join(ROOT, os.environ.get('BARS_DIR', 'bars'))
 
 def load_pair(pair):
     frames = []
