@@ -3,9 +3,11 @@ import sys, os, numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(__file__))
 from sig import *
 
-PIP = {'EURUSD':1e-4,'GBPUSD':1e-4,'AUDUSD':1e-4,'NZDUSD':1e-4,'USDCAD':1e-4,'USDCHF':1e-4,'USDJPY':1e-2,'XAUUSD':0.01}
+PIP = {'EURUSD':1e-4,'GBPUSD':1e-4,'AUDUSD':1e-4,'NZDUSD':1e-4,'USDCAD':1e-4,'USDCHF':1e-4,'USDJPY':1e-2,'XAUUSD':0.01,
+       'EURJPY':1e-2,'GBPJPY':1e-2,'AUDJPY':1e-2,'CADJPY':1e-2,'NZDJPY':1e-2,'EURGBP':1e-4,'EURAUD':1e-4,'EURCHF':1e-4,'AUDNZD':1e-4,'GBPCHF':1e-4}
 # round-trip cost (spread + slippage) in pips, conservative retail ECN
-COST_PIPS = {'EURUSD':1.0,'GBPUSD':1.5,'USDJPY':1.0,'AUDUSD':1.2,'USDCAD':1.8,'USDCHF':1.8,'NZDUSD':1.8,'XAUUSD':30}
+COST_PIPS = {'EURUSD':1.0,'GBPUSD':1.5,'USDJPY':1.0,'AUDUSD':1.2,'USDCAD':1.8,'USDCHF':1.8,'NZDUSD':1.8,'XAUUSD':30,
+             'EURJPY':1.5,'GBPJPY':2.5,'AUDJPY':1.8,'CADJPY':2.2,'NZDJPY':2.5,'EURGBP':1.3,'EURAUD':2.5,'EURCHF':1.8,'AUDNZD':2.5,'GBPCHF':2.5}
 TF_MIN = {'M15':15,'H1':60,'H4':240,'D1':1440}
 
 def htf_feature(df, pair, tf_hi, fn):
