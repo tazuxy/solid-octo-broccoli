@@ -8,8 +8,8 @@
 //|   BUY at 22:00 JST on D, CLOSE at 09:55 JST on G.                |
 //|   Size: risk InpRiskPercent of equity per 1R,                    |
 //|         R = InpRiskATRMult x ATR(14) of the last closed D1 bar.  |
-//|   Backtest used NO stop. Optional stop at InpStopR x R (tested:  |
-//|   2R). If a stop is set, InpRiskPercent is the loss at the stop. |
+//|   Size: InpRiskPercent per 1R. Disaster stop InpStopR x R (8R, |
+//|   round 14); a stop hit loses ~8 x InpRiskPercent.               |
 //| ROUND 6: one filter adopted on 2005-2014 data only and confirmed |
 //|   once on 2015-2024: SKIP when G is the LAST business day of the |
 //|   month (InpSkipMonthEndG, default true). Caveat: month-end      |
@@ -18,7 +18,7 @@
 //| NOT COMPILED / NOT TESTED in MT5. See assumptions at the bottom. |
 //+------------------------------------------------------------------+
 #property copyright "research prototype - use at your own risk"
-#property version   "0.20"
+#property version   "0.30"
 
 #include <Trade\Trade.mqh>
 
@@ -33,9 +33,9 @@ input string        InpExitJST            = "09:55";  // Exit time (JST) on G = 
 input int           InpEntryWindowMin     = 10;       // Minutes after entry time in which entry is still allowed
 input string        InpExtraHolidays      = "";       // Extra JP non-business days, JST, "yyyy.mm.dd,yyyy.mm.dd,..."
 //--- risk
-input double        InpRiskPercent        = 0.5;      // % of equity per 1R (no stop) or at the stop (stop set)
+input double        InpRiskPercent        = 0.25;     // % of equity per 1R (lot is sized on 1R; disaster stop at InpStopR x R)
 input double        InpRiskATRMult        = 0.25;     // R = this x ATR(14, D1)
-input double        InpStopR              = 0.0;      // Stop in R (0 = no stop, as backtested; 2 = tested option)
+input double        InpStopR              = 8.0;      // Stop in R below entry (8 = round-14 pre-registered choice, a disaster stop ~2 ATR; 0 = none)
 input double        InpFixedLots          = 0.0;      // >0: fixed lots instead of risk sizing
 input double        InpMaxSpreadPips      = 1.0;      // Skip entry if spread > this (pips)
 input int           InpSlippagePoints     = 20;       // Max deviation (points)
@@ -45,6 +45,7 @@ input bool          InpSkipMonthEndG      = true;     // Skip if G is the last b
 input bool          InpSkipYearEndGW      = false;    // Skip if G in Dec29-Jan3 or Apr29-May5 (JST)
 input bool          InpSkipRiskOff        = false;    // Skip if 5-day D1 move < -2%
 input bool          InpSkipWeekendHold    = false;    // Skip if D->G spans a weekend/holiday (post-hoc idea, not adopted)
+input double        InpMondayLotMult      = 0.5;      // Lot multiplier when G is a Monday (weekend hold; Monday G ~1.4x volatility, round 10)
 input double        InpMaxHoldHours       = 72.0;     // Safety: close any EA position older than this
 input long          InpMagic              = 20261104;
 
@@ -270,8 +271,14 @@ void Process()
    double atr = LastATR();
    if(atr <= 0) return;
    double R    = InpRiskATRMult * atr;
-   double dist = (InpStopR > 0) ? InpStopR * R : R;
+   double dist = R;                                              // size on 1R as backtested; the stop is a disaster stop
    double lots = LotsFor(dist);
+   if(lots > 0 && DayOfWeek(G) == 1 && InpMondayLotMult > 0 && InpMondayLotMult < 1.0)
+   {
+      double step = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_STEP), vmin = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_MIN);
+      lots = MathFloor(lots * InpMondayLotMult / step) * step;
+      if(lots < vmin) lots = 0.0;
+   }
    if(lots <= 0) { Print("lot size below minimum - skipped"); GlobalVariableSet(gvLast, (double)G); return; }
    double sl = (InpStopR > 0) ? NormalizeDouble(ask - InpStopR * R, _Digits) : 0.0;
    string cm = "GTB " + TimeToString(G, TIME_DATE);
@@ -298,6 +305,8 @@ void Process()
 // 9. Round 6 filter InpSkipMonthEndG: G = last business day of the month is skipped, also when that day is
 //    the 30th (backtest: 'month-end wins ties'). A 30th rolled back from a weekend that is NOT the last business
 //    day is traded. With InpExtraHolidays empty this matches the backtest; adding JP holidays moves month-end.
+// 11. Round 14: InpStopR default 8 (pre-registered stop grid; almost never hit in 2005-21, caps gap-type disasters),
+//     InpMondayLotMult default 0.5 (risk rule, not a tested edge: Monday-G std 63 vs 45 pips; 2005-24 maxDD -766 -> -572 pips).
 // 10. No new indicator handles: the adopted filter is calendar-only. Other round-6 conditions (SMA200, ADX, RSI,
 //    Bollinger, ...) were NOT adopted and are deliberately not offered as inputs. If ever added, use closed bars
 //    (shift=1) and note: MT5 iATR = simple average of TR (backtest: Wilder), iADX is not Wilder (use iADXWilder),
