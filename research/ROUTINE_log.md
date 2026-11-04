@@ -72,3 +72,8 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
  Library v2 (user spec change: +C/I/Z/D/T/combos, pooled 17 FX, top20, t>=3.5, pooled >=60% pairs) + rollover rule (no fills 16:55-17:30 EST), daily-clustered t:
   12 months (same seed-42 order), 240 tests, 0 confirmed; 68/240 positive in confirmation, median t -0.67. T family (counter-trendline) descriptive 2005-21: negative even gross.
  Total confirmation tests 260; holdout looks 2 (both v1 artifacts). Comparison = method 1 only (r7_compare.png). No EA.
+
+## Round 8 (user 2026-11-04): same loop with 12-month discovery windows (calendar years 2005-2021, rng(8), max 8), library v2+T+v1, top-20, >=30 events, confirm t>=3.4, rollover safeguards kept. Holdout 2022-24 (2 prior looks for rejected rollover rules). Output out/r8_report.md.
+## Round 8 result (2026-11-04): NO new method. 8 year-windows (2017,2021,2018,2007,2008,2012,2015,2009), 160 tests, 0 confirmed, 0 holdout looks.
+ Only t>=3.4: GBPCHF 18h long (2021; t 4.7, 2/4 blocks, all P&L at rollover-adjacent 18h). Hit rate: positive 41% (r7 28%), median t -0.46 (r7 -0.67), t>2 3/160.
+ Report out/r8_report.md (JP), log out/r8_loop_log.md, state out/r8_state.json, diag out/r8_diag.md, candidates out/r8_candidates.csv, compare out/r8_compare.png (method 1 only).
