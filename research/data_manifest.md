@@ -34,3 +34,11 @@ Download method that worked: Google Drive connector `search_files` with `parentI
 Put 2012-2024 FX zips in `<WORK>/data`, 2005-2011 FX zips in `<WORK>/data_early`, index zips in `<WORK>/data_idx`, then run `bash research/rebuild.sh <WORK>`.
 
 Data conventions: timestamps are fixed EST (UTC-5, no DST); JST = EST + 14 h; prices are BID only (spread must be modelled; the 16:55-17:30 EST rollover window produces fake bid dips/recoveries and must be excluded from entries/exits).
+
+## Faster method (verified 2026-11-04): direct HTTPS download, no agents needed
+
+`bash research/fetch_data.sh <WORK>` lists each folder via `https://drive.google.com/embeddedfolderview?id=<folderId>` (folder IDs in `research/data_folders.txt`), downloads each zip from `https://drive.usercontent.google.com/download?id=<fileId>&export=download&confirm=t` (6 in parallel, resumable, retries with backoff), checks HTTP 200, Content-Length = bytes received, and `unzip -t`, and puts the files into `data` / `data_early` / `data_idx`. Took about 3 minutes for all files.
+
+Expected result: 426 zips, 1,299,019,707 bytes (data 234 files 813,948,458 B; data_early 117 files 296,017,886 B; data_idx 75 files 189,053,363 B). Per-file sizes are in `research/data_sizes.tsv`; check with
+`cd <WORK> && for f in data*/*.zip; do echo -e "$(basename $f)\t$(stat -c %s $f)"; done | sort | diff - <REPO>/research/data_sizes.tsv && echo SIZES_MATCH`
+(USDJPY 2005-2024 sizes were also confirmed equal to the Drive API `fileSize`.)
