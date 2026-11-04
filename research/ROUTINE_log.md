@@ -44,3 +44,13 @@ Both round-0 results reported to user. Committed 00efb58 (local; push blocked).
   (break-even 0.49-0.88x cost); x2 avgR -0.23..-0.38, 0/6 cells, <=1/17 pairs. Gross edge concentrated 17:30-17:55 (rollover; bid-only artifact likely). Placebo 08-11 EST ~0 gross.
  S2 Tokyo fix USDJPY (cost x1=1.0pip): a -0.004R; b goto-bi +0.039R t2.40, 3 periods +, ratio 2.47 (<3), x2 -0.010 -> FAIL (closest; passes 1-3 only if cost<=0.7pip);
   c -0.020; c2 +0.006. Gross effect also in EURJPY/AUDJPY. No filters/portfolio/EA (nothing passed).
+
+## 2026-11-04 user instructions
+- Spread assumption = 0.5 pip (user). Re-evaluate r4 S1/S2 at 0.5 pip -> out/r4b_report.md (agent running).
+- New Gotobi variants: buy on the business day BEFORE Gotobi (E1 15:00 JST D->09:55 G, E2 22:00 JST D->09:55 G, E3 09:55 D->09:55 G, E4 control 08:00->09:55 on D).
+- Source research: JP 50 (25 EA / 25 method), EN 150 (75 EA / 75 method); individuals preferred, brokers <=20%. WebFetch blocked -> search-excerpt based.
+  Outputs sites2/catalog_jp.md, catalog_en_ea.md, catalog_en_method.md. Then synthesize -> round 5 hypotheses.
+
+## Round 5 launched (200-source ideas): H1 weekend gap fade, H2 round numbers (Osler), H3 daily fix flows (Tokyo/ECB/London pre-long USD / post-short), H4 gold Asia long, H5 JPY afternoon & month-end. Cost 0.5 pip (gold 0.30). t>=3, 6 cells, robustness. -> out/r5_report.md
+
+## Round 5 result: FAIL (14/14). Agent interrupted by container restart after evaluation; report written from saved r5_summary.csv / r5_eval.txt. Closest H1b weekend-gap fade (t 2.42, Bonferroni p 0.11). Gotobi-eve E2 (r4b) remains the only pass.
