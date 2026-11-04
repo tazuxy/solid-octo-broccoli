@@ -93,3 +93,5 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
  K2 index last-30-min momentum FAIL (cost); G2 gold last-30-min momentum FAIL (cost); F2 USDJPY Gotobi post-fix sell 09:55->15:00 JST PASS screen
  (N 1294, +2.9 pips, t 3.20, 4/4 blocks) and FINAL (2022-24 N 232 +5.8 pips; 2005-24 t 3.46) -> METHOD 2. Corr with method 1 -0.01.
  FXCM real bid/ask 2012-24 +4.5 pips. Caveats: drop-top5% -0.03R; overlaps round-4 c2 window (2022-24 seen for c2). EA ea/GotobiPostFix_USDJPY.mq5.
+## Method 2 exits (2026-11-04): stop grid -> 1R chosen (worst trade -343 -> -71 pips, mean kept 93%); TP grid 0/5 adopted; conditional exit at +1R (6 features) 0/6 adopted.
+## Round 12 (2026-11-04): 1R stop applied to round-10 near misses H1/H2/H3 (screen t>=3.0): all FAIL (t_day 1.97 / 2.05 / 1.24); stop hit 54-66% (too tight for 12-24h holds). 2022-24 not looked at.
