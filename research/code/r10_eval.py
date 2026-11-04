@@ -33,8 +33,9 @@ def stats(T0):
     per = T.groupby('inst').netR.mean(); s['pairs_pos'] = f'{int((per > 0).sum())}/{len(per)}'
     s['breakeven_cost_pips'] = T.gross_pips.mean()
     return s
+TMIN = float(os.environ.get('TMIN', '2.5'))   # round 12 re-test uses 3.0
 def screen_ok(s):
-    return bool(s['mean_R'] > 0 and s['t_used'] >= 2.5 and s['nblk_pos'] >= 2 and not s['blk_t_le_m2'] and s['x15_R'] > 0)
+    return bool(s['mean_R'] > 0 and s['t_used'] >= TMIN and s['nblk_pos'] >= 2 and not s['blk_t_le_m2'] and s['x15_R'] > 0)
 
 if __name__ == '__main__':
     mode = sys.argv[1]; tag = sys.argv[2] if len(sys.argv) > 2 else ''   # tag 'h6' -> r10_h6_trades.parquet, r10_screen_h6.csv
