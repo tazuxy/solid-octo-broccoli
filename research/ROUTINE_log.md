@@ -86,3 +86,10 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
  H6 round-4 S1 RSI/mid night scalp on REAL bid/ask 2012-21: mid +0.65 pips, real -0.05 pips (cost mean 0.69), t -0.2 FAIL -> r4b "formal pass" was a bid-only artifact.
  Screen passes 0 -> 2022-2024 NOT looked at. Spreads: 16:00-17:30 EST several x wider (2022-24 EURUSD 1.6, AUDNZD 5.8 pips); crosses 0.5-1.0 pips intraday.
  New unused data: FXCM 2025-2026 bid/ask (could be a fresh forward check of method 1; not used yet, user to decide).
+
+## Gotobi follow-ups (2026-11-04): method 1 forward on FXCM 2025-26 -0.40 pips (93 trades, "somewhat weak"); unused 2000-04 +5.43 (t 1.84, consistent);
+ holiday/Monday modifications 0/4 adopted (Monday G std 1.4x -> half-lot suggested, cuts 2005-24 maxDD 25%); macro events in holding window: no change.
+## Round 11 (2026-11-04): literature-based, 4 pre-registered: K1 index turn-of-month (4 CFDs, 5%/yr financing) FAIL (gross negative);
+ K2 index last-30-min momentum FAIL (cost); G2 gold last-30-min momentum FAIL (cost); F2 USDJPY Gotobi post-fix sell 09:55->15:00 JST PASS screen
+ (N 1294, +2.9 pips, t 3.20, 4/4 blocks) and FINAL (2022-24 N 232 +5.8 pips; 2005-24 t 3.46) -> METHOD 2. Corr with method 1 -0.01.
+ FXCM real bid/ask 2012-24 +4.5 pips. Caveats: drop-top5% -0.03R; overlaps round-4 c2 window (2022-24 seen for c2). EA ea/GotobiPostFix_USDJPY.mq5.
