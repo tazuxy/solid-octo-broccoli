@@ -275,9 +275,9 @@ void Process()
 //    cost 0.5 pip round trip, no swap (the hold does not cross the NY rollover), no slippage.
 //    Real FXCM bid/ask 2012-2024: paid spread 0.2-0.5 pip; result +4.5 pips/trade. Retail reports show 0.5-2 pip slippage
 //    per leg at 09:55; the backtest edge (~3-6 pips/trade) is about used up at ~4 pips of extra round-trip cost.
-// 8. Stop (InpStopR=1): with a stop, InpRiskPercent is the loss AT the stop; lot size is the same as R-sizing
-//    without a stop. 2005-21: 25% of trades stopped, mean kept at 93%; worst trade -1.08R in M5 data.
-//    Real fills during interventions can slip far beyond the stop (M5 data cannot show this).
 // 5. Results depend on a few large trades (mean without the top 5% of trades is slightly negative). Use small risk.
 // 6. One position per symbol/magic. A missed entry window (no tick, spread > InpMaxSpreadPips) skips that Gotobi day.
 // 7. With method 1 on the same account: use a hedging account (the long close and the short open both happen at 09:55).
+// 8. Stop (InpStopR=1): with a stop, InpRiskPercent is the loss AT the stop; lot size is the same as R-sizing
+//    without a stop. 2005-21: 25% of trades stopped, mean kept at 93%; worst trade -1.08R in M5 data.
+//    Real fills during interventions can slip far beyond the stop (M5 data cannot show this).
