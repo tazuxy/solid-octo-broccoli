@@ -13,7 +13,8 @@ def maxdd(r):
     cs = np.cumsum(r); return float((cs - np.maximum.accumulate(np.maximum(cs, 0))).min()) if len(r) else 0.0
 def prep(T, mult=1.0):
     T = T.sort_values('t_ent').copy()
-    T['net'] = T.gross_pips - mult * COST; T['netR'] = T.net / T.R_pips; return T
+    c = T.cost_pips if 'cost_pips' in T else COST          # H6: real spread paid per trade
+    T['net'] = T.gross_pips - mult * c; T['netR'] = T.net / T.R_pips; return T
 def stats(T0):
     T = prep(T0); r = T.netR.values; y = T.t_ent.dt.year.values
     day = T.groupby(T.t_ent.dt.normalize()).netR.sum().values
@@ -36,20 +37,22 @@ def screen_ok(s):
     return bool(s['mean_R'] > 0 and s['t_used'] >= 2.5 and s['nblk_pos'] >= 2 and not s['blk_t_le_m2'] and s['x15_R'] > 0)
 
 if __name__ == '__main__':
-    mode = sys.argv[1]
-    A = pd.read_parquet(os.path.join(OUT, 'r10_trades.parquet'))
+    mode = sys.argv[1]; tag = sys.argv[2] if len(sys.argv) > 2 else ''   # tag 'h6' -> r10_h6_trades.parquet, r10_screen_h6.csv
+    A = pd.read_parquet(os.path.join(OUT, f'r10_{tag}_trades.parquet' if tag else 'r10_trades.parquet'))
+    SCR = os.path.join(OUT, f'r10_screen_{tag}.csv' if tag else 'r10_screen.csv'); FIN = os.path.join(OUT, f'r10_final_{tag}.csv' if tag else 'r10_final.csv')
     if mode == 'screen':
         A = A[A.t_ent < CUT]; assert A.t_ent.max() < CUT
         rows = []
         for h, g in A.groupby('hyp'):
             s = stats(g[g.delay == 0]); s['pass'] = screen_ok(s)
             s['delay1_R'] = stats(g[g.delay == 1])['mean_R'] if (g.delay == 1).any() else np.nan
+            if 'cost_pips' in g: s['mid_minus_0.5_R'] = ((g[g.delay == 0].gross_pips - COST) / g[g.delay == 0].R_pips).mean(); s['median_cost_pips'] = g[g.delay == 0].cost_pips.median()
             rows.append(dict(hyp=h, **s))
-        S = pd.DataFrame(rows); S.to_csv(os.path.join(OUT, 'r10_screen.csv'), index=False)
+        S = pd.DataFrame(rows); S.to_csv(SCR, index=False)
         pd.set_option('display.width', 250); print(S.round(3).T.to_string())
     elif mode == 'final':
-        fl = os.path.join(OUT, 'r10_final.csv'); assert not os.path.exists(fl), 'final check already run once'
-        S = pd.read_csv(os.path.join(OUT, 'r10_screen.csv')); hs = list(S[S['pass']].hyp)
+        fl = FIN; assert not os.path.exists(fl), 'final check already run once'
+        S = pd.read_csv(SCR); hs = list(S[S['pass']].hyp)
         rows = []
         for h in hs:
             g = A[(A.hyp == h) & (A.delay == 0)]
