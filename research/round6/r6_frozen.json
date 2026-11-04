@@ -1,0 +1,20 @@
+{
+ "frozen_utc": "2026-11-04T02:08:09+00:00",
+ "adopted": [
+  {
+   "cond": "DOW2a",
+   "exclude": "month_end"
+  }
+ ],
+ "selection_base": {
+  "N": 756,
+  "mean": 7.144444444444423,
+  "t": 4.287223126926069,
+  "sum": 5401.199999999983,
+  "maxDD": -1024.5000000000025,
+  "ratio": 5.272035139092211
+ },
+ "n_buckets_stage1": 50,
+ "n_buckets_stage2": 42,
+ "note": "written before any validation-period statistic of the filtered rule was computed"
+}

@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//| r4b_EA.mq5  -  Gotobi-eve long (round 4b, variant E2)            |
+//| r6_EA.mq5  -  Gotobi-eve long (round 6 = r4b E2 + month-end skip)|
 //| Rule tested (USDJPY, 2005-2024, bid-only M5, cost 0.5 pip):      |
 //|   G = Gotobi day (JST date 5,10,15,20,25,30 or last business day |
 //|       of the month; if not a business day -> previous business   |
@@ -10,10 +10,15 @@
 //|         R = InpRiskATRMult x ATR(14) of the last closed D1 bar.  |
 //|   Backtest used NO stop. Optional stop at InpStopR x R (tested:  |
 //|   2R). If a stop is set, InpRiskPercent is the loss at the stop. |
+//| ROUND 6: one filter adopted on 2005-2014 data only and confirmed |
+//|   once on 2015-2024: SKIP when G is the LAST business day of the |
+//|   month (InpSkipMonthEndG, default true). Caveat: month-end      |
+//|   weakness had already been seen in the round-4b full sample.    |
+//|   Set InpSkipMonthEndG=false to run the unfiltered r4b E2 rule.  |
 //| NOT COMPILED / NOT TESTED in MT5. See assumptions at the bottom. |
 //+------------------------------------------------------------------+
 #property copyright "research prototype - use at your own risk"
-#property version   "0.10"
+#property version   "0.20"
 
 #include <Trade\Trade.mqh>
 
@@ -34,6 +39,8 @@ input double        InpStopR              = 0.0;      // Stop in R (0 = no stop,
 input double        InpFixedLots          = 0.0;      // >0: fixed lots instead of risk sizing
 input double        InpMaxSpreadPips      = 1.0;      // Skip entry if spread > this (pips)
 input int           InpSlippagePoints     = 20;       // Max deviation (points)
+//--- round 6 adopted filter (selection 2005-2014, confirmed 2015-2024) -> default ON
+input bool          InpSkipMonthEndG      = true;     // Skip if G is the last business day of the month (JST)
 //--- optional filters (tested in round 4b; NOT adopted -> default off)
 input bool          InpSkipYearEndGW      = false;    // Skip if G in Dec29-Jan3 or Apr29-May5 (JST)
 input bool          InpSkipRiskOff        = false;    // Skip if 5-day D1 move < -2%
@@ -118,6 +125,14 @@ bool IsBusinessDay(datetime d)
 }
 datetime NextBusinessDay(datetime d) { datetime t = d + 86400; while(!IsBusinessDay(t)) t += 86400; return t; }
 datetime PrevBusinessDay(datetime d) { datetime t = d - 86400; while(!IsBusinessDay(t)) t -= 86400; return t; }
+//--- last business day of the month of d (same calendar as IsGotobi: weekends + InpExtraHolidays)
+bool IsLastBusinessDayOfMonth(datetime d)
+{
+   MqlDateTime s; TimeToStruct(d, s);
+   datetime t = MakeDate(s.year, s.mon, DaysInMonth(s.year, s.mon));
+   while(!IsBusinessDay(t)) t -= 86400;
+   return (t == d);
+}
 bool IsGotobi(datetime d)
 {
    if(!IsBusinessDay(d)) return false;
@@ -196,7 +211,7 @@ int OnInit()
    trade.SetExpertMagicNumber(InpMagic);
    trade.SetDeviationInPoints(InpSlippagePoints);
    trade.SetTypeFillingBySymbol(_Symbol);
-   gvLast = "r4bEA_lastG_" + _Symbol + "_" + IntegerToString(InpMagic);
+   gvLast = "r6EA_lastG_" + _Symbol + "_" + IntegerToString(InpMagic);
    if(StringFind(_Symbol, "JPY") < 0) Print("warning: rule was tested on USDJPY only");
    EventSetTimer(15);
    return INIT_SUCCEEDED;
@@ -239,6 +254,7 @@ void Process()
 
    MqlDateTime gs; TimeToStruct(G, gs);
    int md = gs.mon * 100 + gs.day;
+   if(InpSkipMonthEndG && IsLastBusinessDayOfMonth(G)) { GlobalVariableSet(gvLast, (double)G); return; }   // round 6 filter
    if(InpSkipYearEndGW && (md >= 1229 || md <= 103 || (md >= 429 && md <= 505))) { GlobalVariableSet(gvLast, (double)G); return; }
    if(InpSkipWeekendHold && (G - jday) > 86400) { GlobalVariableSet(gvLast, (double)G); return; }
    if(InpSkipRiskOff)
@@ -279,3 +295,10 @@ void Process()
 // 6. Swap is not modelled; the hold crosses the NY rollover (and the weekend when G is Monday).
 // 7. One position per symbol/magic. A missed entry window (no tick, wide spread) skips that Gotobi.
 // 8. Lot sizing rounds DOWN to the volume step; if below the minimum lot the trade is skipped.
+// 9. Round 6 filter InpSkipMonthEndG: G = last business day of the month is skipped, also when that day is
+//    the 30th (backtest: 'month-end wins ties'). A 30th rolled back from a weekend that is NOT the last business
+//    day is traded. With InpExtraHolidays empty this matches the backtest; adding JP holidays moves month-end.
+// 10. No new indicator handles: the adopted filter is calendar-only. Other round-6 conditions (SMA200, ADX, RSI,
+//    Bollinger, ...) were NOT adopted and are deliberately not offered as inputs. If ever added, use closed bars
+//    (shift=1) and note: MT5 iATR = simple average of TR (backtest: Wilder), iADX is not Wilder (use iADXWilder),
+//    and broker H4 bars start at the broker's midnight, not 00:00 EST as in the backtest.

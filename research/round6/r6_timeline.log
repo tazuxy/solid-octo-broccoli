@@ -1,0 +1,7 @@
+2026-11-04T02:06:55+00:00 protocol written (r6_protocol.json) - no round-6 statistic computed yet
+2026-11-04T02:07:50+00:00 r6_build: trades built (features only, no bucket statistics). E2 N=1492
+2026-11-04T02:08:09+00:00 r6_select: FROZEN choice = [{'cond': 'DOW2a', 'exclude': 'month_end'}] (selection period only; no validation statistic computed yet)
+2026-11-04T02:08:30+00:00 r6_validate: start; frozen at 2026-11-04T02:08:09+00:00; adopted=[{'cond': 'DOW2a', 'exclude': 'month_end'}]
+2026-11-04T02:08:30+00:00 r6_validate: result CONFIRMED=True
+2026-11-04T02:09:18+00:00 r6_robust done
+2026-11-04T02:09:56+00:00 r6_risk done

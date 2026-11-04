@@ -54,3 +54,7 @@ Both round-0 results reported to user. Committed 00efb58 (local; push blocked).
 ## Round 5 launched (200-source ideas): H1 weekend gap fade, H2 round numbers (Osler), H3 daily fix flows (Tokyo/ECB/London pre-long USD / post-short), H4 gold Asia long, H5 JPY afternoon & month-end. Cost 0.5 pip (gold 0.30). t>=3, 6 cells, robustness. -> out/r5_report.md
 
 ## Round 5 result: FAIL (14/14). Agent interrupted by container restart after evaluation; report written from saved r5_summary.csv / r5_eval.txt. Closest H1b weekend-gap fade (t 2.42, Bonferroni p 0.11). Gotobi-eve E2 (r4b) remains the only pass.
+
+## Round 6 (user 2026-11-04): refine E2 with (1) HTF environment, (2) day-of-week/calendar, (3) extra indicators. Selection 2005-2014, validation 2015-2024 (frozen choice in out/r6_frozen.json before validation). Max 2 filters. Output out/r6_report.md, r6_EA.mq5.
+
+## Round 6 result: one filter frozen on 2005-14 (skip month-end Gotobi), CONFIRMED on 2015-24 (sum/DD 2.02->3.78). Final rule N~1260, +6.2 pips, t 4.6. Caveats: drop top5% -> +0.6 pips t 0.5 (fat-tail dependent); month-end weakness seen earlier (partial contamination). EA updated InpSkipMonthEndG=true.
