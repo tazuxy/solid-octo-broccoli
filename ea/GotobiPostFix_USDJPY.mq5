@@ -34,7 +34,8 @@ input string        InpExitJST            = "15:00";  // Exit time (JST) on the 
 input int           InpEntryWindowMin     = 5;        // Minutes after entry time in which entry is still allowed
 input string        InpExtraHolidays      = "";       // Extra JP non-business days, JST, "yyyy.mm.dd,..." (backtest: none)
 //--- risk
-input double        InpRiskPercent        = 0.25;     // % of equity per 1R (no stop) or at the stop (stop set)
+input double        InpRiskPercent        = 0.15;     // % of equity per 1R (no stop) or at the stop (stop set)
+input double        InpMaxLossPercent     = 2.5;      // HARD CAP: loss at the stop never above this % of equity (lots are cut; a stop is forced if none)
 input double        InpRiskATRMult        = 0.25;     // R = this x ATR(14, D1)
 input double        InpStopR              = 1.0;      // Stop in R above entry (1.0 = chosen in r11_m2_stop; 0 = no stop)
 input double        InpFixedLots          = 0.0;      // >0: fixed lots instead of risk sizing
@@ -189,6 +190,17 @@ double LotsFor(double distPrice)
    return MathMin(lots, vmax);
 }
 
+//--- hard cap: lots such that the loss at the stop is <= InpMaxLossPercent of equity
+double CapLots(double lots, double stopDistPrice)
+{
+   if(lots <= 0 || InpMaxLossPercent <= 0 || stopDistPrice <= 0) return lots;
+   double tickVal = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_VALUE), tickSz = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_SIZE);
+   if(tickVal <= 0 || tickSz <= 0) return 0.0;
+   double maxLots = AccountInfoDouble(ACCOUNT_EQUITY) * InpMaxLossPercent / 100.0 / (stopDistPrice / tickSz * tickVal);
+   double step = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_STEP), vmin = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_MIN);
+   if(lots > maxLots) { lots = MathFloor(maxLots / step) * step; Print("lots cut by InpMaxLossPercent"); }
+   return (lots < vmin) ? 0.0 : lots;
+}
 //+------------------------------------------------------------------+
 int OnInit()
 {
@@ -258,8 +270,12 @@ void Process()
    double R    = InpRiskATRMult * atr;
    double dist = (InpStopR > 0) ? InpStopR * R : R;
    double lots = LotsFor(dist);
+   double stopDist = (InpStopR > 0) ? InpStopR * R : 0.0;
+   if(stopDist <= 0 && InpMaxLossPercent > 0 && InpRiskPercent > 0)
+      stopDist = InpMaxLossPercent / InpRiskPercent * R;        // no stop set: force one so the hard cap still holds
+   lots = CapLots(lots, stopDist);                                // loss at the stop <= InpMaxLossPercent
    if(lots <= 0) { Print("lot size below minimum - skipped"); GlobalVariableSet(gvLast, (double)jday); return; }
-   double sl = (InpStopR > 0) ? NormalizeDouble(bid + InpStopR * R, _Digits) : 0.0;
+   double sl = (stopDist > 0) ? NormalizeDouble(bid + stopDist, _Digits) : 0.0;
    string cm = "PFX " + TimeToString(jday, TIME_DATE);
    if(trade.Sell(lots, _Symbol, 0.0, sl, 0.0, cm))
       GlobalVariableSet(gvLast, (double)jday);
@@ -281,3 +297,5 @@ void Process()
 // 8. Stop (InpStopR=1): with a stop, InpRiskPercent is the loss AT the stop; lot size is the same as R-sizing
 //    without a stop. 2005-21: 25% of trades stopped, mean kept at 93%; worst trade -1.08R in M5 data.
 //    Real fills during interventions can slip far beyond the stop (M5 data cannot show this).
+// 9. Risk (user, 2026-11-04): InpRiskPercent 0.15 per 1R (stop 1R -> loss at the stop 0.15%); HARD CAP InpMaxLossPercent 2.5.
+//    Gaps beyond the stop are not capped by any order type. Backtest worst trade 2000-2026: -1.19R = -0.18% at 0.15%.

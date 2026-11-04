@@ -33,7 +33,8 @@ input string        InpExitJST            = "09:55";  // Exit time (JST) on G = 
 input int           InpEntryWindowMin     = 10;       // Minutes after entry time in which entry is still allowed
 input string        InpExtraHolidays      = "";       // Extra JP non-business days, JST, "yyyy.mm.dd,yyyy.mm.dd,..."
 //--- risk
-input double        InpRiskPercent        = 0.25;     // % of equity per 1R (lot is sized on 1R; disaster stop at InpStopR x R)
+input double        InpRiskPercent        = 0.15;     // % of equity per 1R (lot is sized on 1R; disaster stop at InpStopR x R)
+input double        InpMaxLossPercent     = 2.5;      // HARD CAP: loss at the stop never above this % of equity (lots are cut; a stop is forced if none)
 input double        InpRiskATRMult        = 0.25;     // R = this x ATR(14, D1)
 input double        InpStopR              = 8.0;      // Stop in R below entry (8 = round-14 pre-registered choice, a disaster stop ~2 ATR; 0 = none)
 input double        InpFixedLots          = 0.0;      // >0: fixed lots instead of risk sizing
@@ -194,6 +195,17 @@ double LotsFor(double distPrice)
    return MathMin(lots, vmax);
 }
 
+//--- hard cap: lots such that the loss at the stop is <= InpMaxLossPercent of equity
+double CapLots(double lots, double stopDistPrice)
+{
+   if(lots <= 0 || InpMaxLossPercent <= 0 || stopDistPrice <= 0) return lots;
+   double tickVal = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_VALUE), tickSz = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_SIZE);
+   if(tickVal <= 0 || tickSz <= 0) return 0.0;
+   double maxLots = AccountInfoDouble(ACCOUNT_EQUITY) * InpMaxLossPercent / 100.0 / (stopDistPrice / tickSz * tickVal);
+   double step = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_STEP), vmin = SymbolInfoDouble(_Symbol, SYMBOL_VOLUME_MIN);
+   if(lots > maxLots) { lots = MathFloor(maxLots / step) * step; Print("lots cut by InpMaxLossPercent"); }
+   return (lots < vmin) ? 0.0 : lots;
+}
 //+------------------------------------------------------------------+
 int OnInit()
 {
@@ -279,8 +291,12 @@ void Process()
       lots = MathFloor(lots * InpMondayLotMult / step) * step;
       if(lots < vmin) lots = 0.0;
    }
+   double stopDist = (InpStopR > 0) ? InpStopR * R : 0.0;
+   if(stopDist <= 0 && InpMaxLossPercent > 0 && InpRiskPercent > 0)
+      stopDist = InpMaxLossPercent / InpRiskPercent * R;        // no stop set: force one so the hard cap still holds
+   lots = CapLots(lots, stopDist);                                // loss at the stop <= InpMaxLossPercent
    if(lots <= 0) { Print("lot size below minimum - skipped"); GlobalVariableSet(gvLast, (double)G); return; }
-   double sl = (InpStopR > 0) ? NormalizeDouble(ask - InpStopR * R, _Digits) : 0.0;
+   double sl = (stopDist > 0) ? NormalizeDouble(ask - stopDist, _Digits) : 0.0;
    string cm = "GTB " + TimeToString(G, TIME_DATE);
    if(trade.Buy(lots, _Symbol, 0.0, sl, 0.0, cm))
       GlobalVariableSet(gvLast, (double)G);
@@ -307,6 +323,9 @@ void Process()
 //    day is traded. With InpExtraHolidays empty this matches the backtest; adding JP holidays moves month-end.
 // 11. Round 14: InpStopR default 8 (pre-registered stop grid; almost never hit in 2005-21, caps gap-type disasters),
 //     InpMondayLotMult default 0.5 (risk rule, not a tested edge: Monday-G std 63 vs 45 pips; 2005-24 maxDD -766 -> -572 pips).
+// 12. Risk (user, 2026-11-04): InpRiskPercent 0.15 per 1R; HARD CAP InpMaxLossPercent 2.5 = loss at the stop. With the 8R stop
+//     the loss at the stop is 8 x 0.15 = 1.2%. Gaps/slippage beyond the stop are NOT capped by any order type; the 2.5% cap leaves
+//     room for a gap of about 8.7R (~190 pips) beyond the stop. Backtest worst trade 2000-2026: -8.05R = -1.21% at 0.15%.
 // 10. No new indicator handles: the adopted filter is calendar-only. Other round-6 conditions (SMA200, ADX, RSI,
 //    Bollinger, ...) were NOT adopted and are deliberately not offered as inputs. If ever added, use closed bars
 //    (shift=1) and note: MT5 iATR = simple average of TR (backtest: Wilder), iADX is not Wilder (use iADXWilder),
