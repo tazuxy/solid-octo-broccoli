@@ -1,0 +1,4 @@
+2026-11-04T02:36:02+00:00 START holdout method2 AUDNZD|F1_h16|S (frozen 2026-11-04T02:36:02+00:00)
+2026-11-04T02:36:04+00:00 DONE holdout method2 accepted=True
+2026-11-04T02:36:05+00:00 START holdout method3 EURAUD|F1_h17|L (frozen 2026-11-04T02:36:05+00:00)
+2026-11-04T02:36:08+00:00 DONE holdout method3 accepted=True

@@ -1,0 +1,241 @@
+mon,k,fam,base,combo,pooled,tf,cand,t_disc,N,mR,t,blocks,verdict,pos
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_SWH_rej & dh4=1 & dd1=0 & loc=SWH → br follow,8.092248954866129,569,-0.04278385148425142,-1.0567825212401114,1/4,limited,False
+201203,1,indicator,indicator,False,False,H4,H4 NZDUSD I_adx_gt25 → h4 fade,7.187903129361451,3115,-0.05648967726929622,-1.5213534533188313,1/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_PDL_rej & dh4=0 & e200=1 & macdt=1 → h24 fade,6.271845319854735,155,-0.22114014412186755,-1.0084437594488636,1/4,limited,False
+201203,1,indicator,indicator,False,False,H4,H4 GBPCHF I_ema200 → h24 fade,6.249516139597165,1120,0.21324448046519157,1.2556888475455765,3/4,limited,True
+201203,1,indicator,indicator,False,False,H4,H4 NZDUSD I_adx_gt25 → h12 fade,6.2140856890483205,1197,-0.042126631526521435,-0.40138401341621255,2/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_PP_rej & dh4=-1 & dd1=-1 & loc=PP → h12 follow,5.993150603224565,218,-0.339597013529747,-2.4816327086944963,0/4,limited,False
+201203,1,indicator,indicator,False,False,H4,H4 NZDUSD I_adx_gt25 → br fade,5.99133164787661,2927,-0.05838754757763303,-1.5585440025980086,1/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_PP_rej & dd1=-1 & loc=PP & macdh=1 → h12 follow,5.907112624583965,356,-0.27645585148940094,-2.827957128727673,0/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & dh4=1 & dd1=0 & macdt=1 → br follow,5.75980620398332,487,0.044784471845586094,0.9931154482044576,3/4,limited,True
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_PP_rej & dd1=-1 & loc=PP & stz=0 → h12 follow,5.759037891291764,580,-0.11329645232836014,-1.4703575167960792,0/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWH_at & dh4=-1 & dd1=-1 & stz=0 → br fade,5.758777853067728,428,0.015243160996758898,0.33138893008317294,2/4,limited,True
+201203,1,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dh4=1 & dd1=0 & rsi50=-1 → br follow,5.752184063813085,699,-0.03049786260634656,-0.8393847741534528,1/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWH_rej & dh4=-1 & dd1=-1 & loc=SWH → br fade,5.745338157098322,339,0.01719428046560411,0.3343055401010901,2/4,limited,True
+201203,1,combination (zone trigger),zone,True,False,H1,H1 AUDUSD Z_ASH_at & e200=-1 & macdh=1 → br fade,5.742093397492622,1261,-0.03894962813635833,-1.3621298763391196,0/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWH_rej & dh4=-1 & dd1=-1 & stz=0 → br fade,5.614206792783889,415,0.010931598204971908,0.2349210102307088,2/4,limited,True
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_PP_rej & dd1=-1 & loc=PP & rsiz=2 → h24 follow,5.533222662430414,322,-0.0391225157898031,-0.26968153488152413,1/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWH_rej & dh4=-1 & e200=-1 & stz=0 → h12 fade,5.530476219766592,642,0.05158504680723485,0.6917739435992942,2/4,limited,True
+201203,1,combination (candle trigger),candle,True,False,H1,H1 EURUSD C_outside & dd1=-1 & e200=1 & macdh=-1 → h12 fade,5.526846902705178,430,-0.07542762370584738,-0.8195293698186731,1/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 NZDJPY Z_SWL_rej & dh4=0 & e200=1 & rsi50=-1 → br fade,5.519106050657519,729,-0.07866217680185897,-2.224411499831049,0/4,limited,False
+201203,1,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & dh4=1 & dd1=0 & rsiz=1 → br follow,5.435871907387207,620,0.020772437903536896,0.5188150199905351,3/4,limited,True
+202107,2,indicator,indicator,False,False,H4,H4 GBPJPY I_rsi_lt30 → h24 fade,10.202656827240784,255,0.03460946000477615,0.08509504022602038,2/4,limited,True
+202107,2,indicator,indicator,False,False,H1,H1 CADJPY I_rsi_gt70 → br fade,7.257191509000135,2019,-0.013865830727021826,-0.6249690191405984,2/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_SWH_at & dd1=0 & e200=-1 & macdh=-1 → br follow,6.581799654453372,512,-0.03830552864813952,-0.8555736220735127,1/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H1,H1 USDCHF Z_ASH_at & dh4=1 & macdt=1 → h24 follow,6.555625640060007,718,0.051476100055747945,0.3642316864400676,3/4,limited,True
+202107,2,combination (trendline trigger),trendline,True,True,H1,H1 POOL T_a_e4 & dh4=0 & dd1=0 & macdh=-1 → h24 follow,6.192314157168404,1781,-0.05813657378631793,-0.9719823086553503,2/4,limited,False
+202107,2,combination (trendline trigger),trendline,True,True,H1,H1 POOL T_a_any & dh4=0 & dd1=0 & macdh=-1 → h24 follow,6.192314157168404,1781,-0.05813657378631793,-0.9719823086553503,2/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H4,H4 AUDNZD Z_PWL_rej & macdt=1 → br follow,6.167442954817612,417,-0.085681884582033,-0.8558838341482908,2/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H4,H4 USDJPY Z_PP_rej & dd1=1 & stz=0 → br follow,6.144325844002225,637,0.057490013387519794,0.7501855565409777,2/4,limited,True
+202107,2,combination (zone trigger),zone,True,False,H1,H1 USDCHF Z_ASH_at & dh4=1 & macdh=-1 → h24 follow,5.89270286716177,543,-0.04684373797114239,-0.44527097188474934,2/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWH_at & dh4=0 & e200=-1 & macdt=-1 → br follow,5.789327458855588,633,-0.057951326408342725,-1.341108634987461,2/4,limited,False
+202107,2,indicator,indicator,False,False,H4,H4 XAUUSD I_ema200 → h24 fade,5.782183456216962,836,-0.382564821082222,-1.9471703717984776,0/3,limited,False
+202107,2,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_S1_rej & dd1=1 → br follow,5.714504523533245,773,0.0005447733461998683,0.013680942575119282,2/4,limited,True
+202107,2,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWH_rej & dh4=0 & e200=-1 & macdt=-1 → br follow,5.659067030062856,730,-0.10398850998978622,-2.6098071976571333,0/4,limited,False
+202107,2,time,time,False,False,H1,GBPCHF F1_h18 long/follow,5.499904169388125,4350,0.03851531103827577,7.745392267561355,2/4,limited,True
+202107,2,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_brk & dd1=0 & e200=-1 & macdt=-1 → h24 follow,5.493195857592371,2564,0.004782835757714961,0.04162448484660391,2/4,limited,True
+202107,2,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWH_rej & dh4=0 & e200=-1 & rsiz=2 → br follow,5.4387183403724775,677,-0.07786964400425787,-1.9081926906643811,1/4,limited,False
+202107,2,combination (zone trigger),zone,True,False,H4,H4 AUDNZD Z_SWL_rej & macdt=1 → br follow,5.369993535073817,1011,-0.09046128850608025,-1.4141106224791602,1/4,limited,False
+202107,2,combination (zone trigger),zone,True,True,H4,H4 POOL Z_SWH_at & macdt=1 → h24 follow,5.2263825754315665,9731,0.004079996061976359,0.06825096512112985,2/4,limited,True
+202107,2,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_rej & e200=-1 & loc=SWH & macdh=1 → h24 fade,5.2154223628898935,1856,-0.0894761731259422,-0.7704342067716369,1/4,limited,False
+202107,2,combination (zone trigger),zone,True,True,H1,H1 POOL Z_S1_at & dd1=1 & e200=1 & rsiz=1 → br fade,5.159638259193454,3437,-0.05215194811767224,-2.9963606706749424,0/4,limited,False
+201707,3,indicator,indicator,False,False,H4,H4 EURUSD I_bb_lh → h24 fade,7.3492687141040935,898,-0.07577694310571523,-0.4271660852837371,2/4,limited,False
+201707,3,indicator,indicator,False,False,H4,H4 EURUSD I_ema200 → h24 follow,7.155494249517873,1121,0.061023172789056994,0.3855797457674966,2/4,limited,True
+201707,3,indicator,indicator,False,False,H4,H4 EURUSD I_cloud → h24 follow,6.823220744397597,1103,-0.04419692953607479,-0.2721125294302351,3/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dh4=0 & dd1=1 & stz=-1 → h24 follow,6.419862777127918,193,-0.2866341793576195,-1.637828029667289,1/4,limited,False
+201707,3,indicator,indicator,False,False,H4,H4 EURUSD I_rsi_50_70 → h24 follow,5.8296169098508415,867,-0.04128648419824047,-0.23027049684734335,2/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 AUDJPY Z_SWH_at & loc=PDH & macdh=1 → h12 fade,5.764730376812561,920,0.005206677035110044,0.08803765312004118,2/4,limited,True
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_SWH_at & dh4=1 & dd1=1 & rsi50=1 → br fade,5.647520097803013,494,-0.05020527149069892,-1.1139085965681192,1/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 NZDJPY Z_ASL_rej & dh4=0 & dd1=1 & macdh=-1 → h4 follow,5.6113805088986375,412,-0.02525302069154214,-0.4947203559181005,2/4,limited,False
+201707,3,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_rej & dd1=1 & e200=-1 & macdh=1 → br follow,5.5617055935613395,1851,-0.05387545951132479,-1.215318486004919,0/4,limited,False
+201707,3,indicator,indicator,False,True,H4,H4 POOL I_bb_uh → h24 follow,5.531933360801773,15097,-0.10650273766140989,-1.8359654468924804,1/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_PP_rej & dh4=0 & dd1=0 & stz=0 → h12 follow,5.4168918290604235,426,0.05725591791458077,0.5635197093537089,2/4,limited,True
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_PP_at & dh4=1 & macdh=-1 → br follow,5.409945886392333,1174,-0.012788784042889509,-0.41856882938229234,2/4,limited,False
+201707,3,combination (trendline trigger),trendline,True,True,H1,H1 POOL T_a_any & dd1=-1 & e200=1 & macdt=1 → tt fade,5.388893082660417,2029,-0.059354856345069824,-1.5629134818661634,1/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_PP_at & dh4=1 & macdh=-1 → h24 follow,5.343131886404414,793,-0.7515229697892184,-1.0435461200657856,1/4,limited,False
+201707,3,indicator,indicator,False,True,H4,H4 POOL I_ema200 → h24 follow,5.259575632171285,18487,-0.059399840982786396,-1.1144502549380648,1/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_SWH_at & dh4=1 & dd1=1 & loc=SWH → br fade,5.207607301471584,735,-0.09225333060639543,-2.469675453858018,0/4,limited,False
+201707,3,indicator,indicator,False,False,H4,H4 EURUSD I_rsi_30_50 → h24 fade,5.181650062248465,857,-0.1570242958047413,-0.8780832207022433,1/4,limited,False
+201707,3,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_PP_rej & dh4=0 & dd1=0 & rsi50=-1 → h12 follow,5.102108974675784,315,0.10834013983956475,0.9363345743732486,3/4,limited,True
+201707,3,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_PP_at & dh4=1 & e200=1 & loc=PP → br follow,5.101867722193106,1072,-0.0028517385203841593,-0.08812749723829688,2/4,limited,False
+201707,3,combination (trendline trigger),trendline,True,False,H1,H1 EURUSD T_a_dd1 & stz=0 → h24 follow,5.073651174257972,930,-0.010775495517071975,-0.12008612891319462,2/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_ASH_rej & dh4=0 & dd1=1 & rsi50=1 → h24 fade,8.724273035543924,337,0.1360604187026639,0.966977659324576,3/4,limited,True
+201311,4,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_ASH_rej & dh4=0 & dd1=1 & rsi50=1 → h12 fade,7.702148681731271,397,0.1866923231250009,1.937181402006179,4/4,limited,True
+201311,4,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_SWL_rej & dd1=1 & macdh=1 → h24 fade,6.641309804939185,574,0.12702531684265372,1.1527867870376132,3/4,limited,True
+201311,4,combination (candle trigger),candle,True,False,H1,H1 GBPCHF C_outside & dh4=-1 & rsi50=-1 → h12 fade,6.459174988081858,1252,-0.07167923719826114,-1.3316712780481823,1/4,limited,False
+201311,4,combination (zone trigger),zone,True,True,H1,H1 POOL Z_ASH_at & dh4=0 & e200=-1 & loc=PP → br fade,6.376534692087907,1921,-0.12406160640720101,-5.7459884746975645,1/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H4,H4 EURJPY Z_PP_rej & e200=1 & macdh=-1 → h24 fade,5.989269105368869,406,-0.2623084972825959,-1.0191601882930106,1/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 AUDJPY Z_SWL_at & dd1=1 & macdt=1 → h12 fade,5.849153859745906,897,-0.06139643974365812,-0.815770398631165,2/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dd1=0 & macdh=-1 → h24 fade,5.78221281001529,716,-0.009693985548781692,-0.09123100190527134,2/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWL_at & dh4=1 & macdt=1 → br follow,5.633431056558441,905,-0.12088276189865285,-3.302292476127291,0/4,limited,False
+201311,4,indicator,indicator,False,False,H4,H4 USDJPY I_cloud → h24 follow,5.623625750742352,1099,-0.005819957346396274,-0.036023042151430346,2/4,limited,False
+201311,4,indicator,indicator,False,False,H4,H4 CADJPY I_rsi_30_50 → br fade,5.528363960818605,2653,-0.10233681885207284,-2.6663189766533026,1/4,limited,False
+201311,4,combination (candle trigger),candle,True,False,H1,H1 EURGBP C_outside & dh4=1 & e200=1 & rsi50=1 → h12 fade,5.524270588431346,1047,-0.10147968861514754,-1.6049424459960744,1/4,limited,False
+201311,4,indicator,indicator,False,False,H4,H4 AUDJPY I_ema200 → h24 fade,5.513046878458995,1049,-0.08475925941983838,-0.4916806813615417,1/4,limited,False
+201311,4,indicator,indicator,False,False,H4,H4 GBPJPY I_ema200 → h24 follow,5.508551171149669,1121,-0.06751321959241678,-0.41059563262174564,1/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_ASL_rej & stz=0 → br follow,5.499659545207331,3773,-0.01713423760676561,-1.0587765863152192,0/4,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 USDCAD Z_ASL_at & e200=-1 & macdt=1 → h24 fade,5.46625932712945,824,0.05355247851655159,0.6023716538578249,2/4,limited,True
+201311,4,combination (zone trigger),zone,True,False,H1,H1 XAUUSD Z_ASH_rej & dd1=-1 & loc=SWH & macdt=1 → br follow,5.452266080210273,270,-0.12973139273339077,-2.659666650680487,0/3,limited,False
+201311,4,combination (zone trigger),zone,True,False,H1,H1 AUDJPY Z_SWL_at & dd1=1 & macdt=1 → h24 fade,5.44833617221773,639,0.03800455610290834,0.30622805111434537,1/4,limited,True
+201311,4,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_SWL_rej & dh4=1 & rsi50=1 → h4 fade,5.411129160065565,736,-0.03428904023592053,-0.8622046602703997,1/4,limited,False
+201311,4,indicator,indicator,False,False,H4,H4 EURJPY I_rsi_50_70 → h24 follow,5.380937337988138,880,0.043313354325100785,0.2470203335093393,3/4,limited,True
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_at & dd1=1 & e200=1 & macdh=1 → h12 follow,7.102988912001613,354,-0.0015528884506894188,-0.01575094668010727,2/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dd1=1 & e200=1 & loc=SWL → h12 follow,6.885723585462824,524,0.028855593266638592,0.3465461695641917,3/4,limited,True
+201508,5,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_SWL_rej & dd1=1 & stz=0 → h12 fade,6.312543927214938,1160,-0.0926988356247093,-1.6511762231896656,0/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_SWL_at & loc=PP & macdt=-1 → h12 follow,6.082227014497304,943,-0.039348585480497814,-0.7497260553820138,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURCHF Z_SWL_at & e200=1 & loc=PP & macdt=-1 → h12 follow,5.750376398467901,337,-0.03224979023017887,-0.34939724605806266,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dh4=0 & e200=1 & rsiz=1 → br follow,5.74488765725446,658,-0.026930631477556387,-0.7387784444524412,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & e200=1 & macdt=-1 → br follow,5.725076333937721,1630,-0.021897888488415507,-0.9534007134831981,2/4,limited,False
+201508,5,indicator,indicator,False,False,H1,H1 EURUSD I_rsi_gt70 → br follow,5.709669357712316,2137,-0.02100105485203769,-0.9393587287642227,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dd1=1 & e200=1 & loc=SWL → br follow,5.657462491131116,684,-0.014331937204631868,-0.4056639470119864,2/4,limited,False
+201508,5,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_rej & dd1=-1 & e200=-1 & loc=none → br fade,5.544584573980121,3886,-0.11747525682331778,-3.789342086383939,0/4,limited,False
+201508,5,combination (zone trigger),zone,True,True,H4,H4 POOL Z_S1_at & dh4=0 & e200=-1 & loc=SWL → br follow,5.531213048445083,1844,-0.12114884406147416,-2.7734754064162757,0/4,limited,False
+201508,5,combination (candle trigger),candle,True,False,H1,H1 EURAUD C_maru & dd1=1 & e200=1 & macdh=-1 → br follow,5.510458767102161,620,-0.07904054312302347,-1.7657289533410785,0/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_rej & dd1=1 & loc=SWL & stz=0 → h12 fade,5.494889294923017,807,-0.03566976330057688,-0.5856583881226,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,True,H4,H4 POOL Z_S1_rej & e200=-1 & loc=S1 & macdh=-1 → br follow,5.480035256110492,4655,-0.037957868258153386,-1.3305729575480545,0/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_rej & dd1=1 & e200=1 & stz=0 → h24 follow,5.436404584840131,489,-0.11459155639569991,-0.9321716697800576,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H4,H4 EURGBP Z_PP_at & dd1=1 → br fade,5.300449932775963,753,-0.052070435300045424,-0.7661819198635007,2/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H4,H4 EURGBP Z_PP_at & dd1=1 & rsiz=2 → br fade,5.294148622514393,396,-0.0008608704750755626,-0.009088049282773875,2/4,limited,False
+201508,5,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWH_at & dh4=1 & macdt=1 → br follow,5.236433243670314,1498,-0.024301500053904395,-0.8212608000611145,1/4,limited,False
+201508,5,combination (zone trigger),zone,True,True,H1,H1 POOL Z_ASH_at & dd1=-1 & e200=1 & macdt=-1 → br fade,5.2137410997269065,4717,-0.044820174576217287,-3.0945901236062663,0/4,limited,False
+201508,5,combination (zone trigger),zone,True,True,H1,H1 POOL Z_PWH_brk & dd1=1 & loc=none & rsi50=1 → br follow,5.20432763021191,2737,-0.022670017935977456,-1.1423571727238162,0/4,limited,False
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_SWH_at & e200=-1 & macdt=1 → h12 fade,10.407746530683726,1325,0.06263523089288875,1.2253653430195155,3/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_SWH_at & e200=-1 → h12 fade,10.36343688110443,1755,0.04028216860653378,0.8999811692133707,4/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_SWH_at & e200=-1 & stz=0 → h12 fade,9.011568356880487,1493,0.020712935041185276,0.4204047120946742,3/4,limited,True
+201903,6,indicator,indicator,False,True,H4,H4 POOL I_cloud → h24 fade,8.069913754773289,18180,-0.040064926703432965,-0.7858040400260706,1/4,limited,False
+201903,6,indicator,indicator,False,True,H4,H4 POOL I_ema200 → h24 fade,7.706378027008562,18491,-0.0007280410676350256,-0.013650297022816981,1/4,limited,False
+201903,6,indicator,indicator,False,False,H4,H4 GBPUSD I_cloud → h24 fade,6.90539445982898,1104,0.012128066305663791,0.07450565982192796,1/4,limited,True
+201903,6,combination (zone trigger),zone,True,True,H1,H1 POOL Z_R1_at & dd1=1 & e200=-1 & rsiz=1 → h12 fade,6.668379207521688,93,0.18920955198237532,1.0579245598859486,3/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_SWH_at & dh4=1 & e200=1 & macdt=1 → br follow,6.1978441030432005,1424,-0.011198830111803419,-0.4461572079931178,2/4,limited,False
+201903,6,zone,zone,False,False,H1,H1 EURGBP Z_PWL_at → br fade,6.191191578571379,948,-0.03508342109831535,-1.0855291554526891,1/4,limited,False
+201903,6,combination (zone trigger),zone,True,False,H1,H1 USDJPY Z_SWL_at & e200=-1 & loc=ASL → h12 fade,6.143842708183205,804,0.12951463104711305,1.801188893577577,3/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 USDCHF Z_ASH_at & dd1=0 & macdt=-1 → br follow,6.091148515856318,623,-0.05946024114736626,-1.630382764773074,1/4,limited,False
+201903,6,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_at & dd1=0 & loc=PDH & macdh=-1 → h24 follow,6.025310357674341,83,-0.19159433861091932,-0.3213057571548802,2/4,limited,False
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_PP_rej & dh4=0 & dd1=1 & stz=0 → h24 fade,5.918773422918994,408,0.011718607640830422,0.08460592077321119,2/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_SWH_at & e200=-1 → h4 fade,5.8216046608191965,3212,0.005619653248765818,0.28487266774945136,2/4,limited,True
+201903,6,combination (zone trigger),zone,True,False,H1,H1 USDCAD Z_S1_rej & e200=1 & stz=0 → br fade,5.80053502238352,390,-0.06626328338722237,-1.3102558808296458,2/4,limited,False
+201903,6,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_SWH_at & e200=-1 & macdt=1 → h4 fade,5.669119890127384,1987,0.021486668467613348,0.8937468388750254,3/4,limited,True
+201903,6,combination (zone trigger),zone,True,True,H1,H1 POOL Z_PDH_rej & dh4=-1 & dd1=1 & macdh=1 → br follow,5.653768702687945,3521,-0.04727577978797895,-2.840168467620905,0/4,limited,False
+201903,6,combination (trendline trigger),trendline,True,False,H1,H1 USDCHF T_a_any & macdh=-1 → tt fade,5.6114478600484885,1028,-0.005114270138322074,-0.0847187772191365,2/4,limited,False
+201903,6,indicator,indicator,False,False,H4,H4 EURJPY I_cloud → h24 fade,5.4962411065042005,1098,0.0900715890930326,0.5622696450348613,3/4,limited,True
+201903,6,combination (zone trigger),zone,True,True,H1,H1 POOL Z_ASL_at & dd1=-1 & loc=SWL & rsi50=1 → h12 fade,5.4674144583342,1357,-0.021285287903418645,-0.3998568419660603,2/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & e200=-1 → h12 follow,7.77731610803078,1794,-0.0072278791048721695,-0.18124179051533845,2/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & e200=-1 → br follow,6.840234656649073,2549,-0.029082825104121628,-1.498756589838117,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWH_rej & dd1=0 & e200=1 & macdt=1 → br follow,6.504947832343653,1199,-0.06268749341864509,-2.272925039229777,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_SWL_at & e200=1 & macdh=-1 → br follow,6.390393909811851,1989,-0.0031470732822731517,-0.14519016382691244,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASH_rej & dh4=0 & e200=1 & rsiz=2 → br fade,6.205782374724407,952,-0.045051436837729913,-1.4728346808988055,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_PWH_rej & macdh=-1 → br follow,6.185131757198529,723,0.016379520288180485,0.43597401744795594,2/4,limited,True
+200606,7,combination (zone trigger),zone,True,False,H1,H1 USDJPY Z_SWH_at & dd1=0 & loc=PP & macdh=1 → h12 fade,6.115854865072815,228,-0.0024488249980267377,-0.021179817198111912,3/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 USDJPY Z_PP_at & dd1=0 & loc=SWH & macdh=1 → h12 fade,6.115854865072815,228,-0.0205615139493039,-0.1777442182210988,2/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & dh4=0 & e200=-1 & rsi50=-1 → h12 follow,5.892500381958457,720,-0.025656850519500906,-0.40779718680786486,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_SWL_at & e200=1 → br follow,5.7198301115178225,2880,-0.00547889493529776,-0.2997514896158543,2/4,limited,False
+200606,7,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PDH_at & dd1=-1 & e200=-1 & stz=0 → br follow,5.652958288267661,3261,0.056518029691634816,1.471684489489213,2/4,limited,True
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASH_rej & dh4=0 & e200=1 & loc=SWH → br fade,5.6060647848627845,513,-0.013991101062303727,-0.33523249763096274,2/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASH_rej & dh4=0 & e200=1 & stz=0 → br fade,5.560997905782694,815,-0.07879255070162954,-2.4088438984939335,0/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 USDCAD Z_SWL_rej & e200=1 & stz=-1 → h24 fade,5.542477742738604,436,0.06662936710937176,0.516446701034401,3/4,limited,True
+200606,7,combination (zone trigger),zone,True,False,H1,H1 USDCAD Z_SWL_rej & e200=1 & stz=-1 → h12 fade,5.5273080266306085,488,0.015406005479362262,0.18410047794039042,2/4,limited,True
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & e200=-1 & rsiz=1 → h12 follow,5.508665917483651,1630,-0.0038442124435989623,-0.0907054823399281,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & e200=-1 & rsiz=1 → br follow,5.484429878338427,2220,-0.03427641052266166,-1.65340877985254,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_PDL_rej & dh4=0 & e200=-1 & rsi50=-1 → br follow,5.445144978614599,973,-0.027276029007968987,-0.8755089938741084,1/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_PP_rej & dd1=0 & loc=PP & macdt=-1 → br follow,5.424533404366426,598,-0.052613467126530734,-1.2397510546757922,0/4,limited,False
+200606,7,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWH_at & dd1=0 & e200=-1 & rsi50=1 → br follow,5.420533559354232,612,-0.029672968249293552,-0.7296881376861323,2/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_bb_uh → h24 follow,9.576433259968848,803,-0.015872060612985368,-0.08655115458622177,2/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_rsi_30_50 → h24 fade,7.897717450849653,737,-0.22490239309562088,-1.1239719510755746,0/4,limited,False
+201202,8,indicator,indicator,False,False,H1,H1 GBPJPY I_rsi_30_50 → h12 fade,7.105534461458502,5749,-0.03977669834073913,-1.568591464470363,0/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_rsi_50_70 → h24 follow,6.990792059151342,769,-0.0027185356884470587,-0.01415545912100445,2/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_ema200 → h24 follow,6.927514854952142,973,-0.1137564338818925,-0.6906240986813152,2/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 NZDJPY I_bb_lh → br fade,6.558738071101208,2669,-0.051771275857060726,-1.2952020500837738,1/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 USDJPY I_bb_lh → h24 fade,6.419154975834716,897,0.09263405483458766,0.4977105041783893,2/4,limited,True
+201202,8,combination (zone trigger),zone,True,False,H1,H1 AUDUSD Z_ASH_rej & dh4=-1 & stz=0 → br follow,6.351760154165198,1041,-0.008364424309006708,-0.26651815195484846,2/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 GBPJPY I_ema200 → h24 follow,6.2120965442016916,1121,-0.06532619027376342,-0.39697274587912973,1/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 GBPJPY I_rsi_50_70 → h24 follow,6.086986652369104,873,0.18826484833472634,1.0604127028111248,3/4,limited,True
+201202,8,indicator,indicator,False,False,H4,H4 GBPJPY I_bb_uh → h24 follow,6.061319920644612,925,0.05831883870530236,0.32972985711492175,3/4,limited,True
+201202,8,combination (zone trigger),zone,True,False,H4,H4 AUDNZD Z_SWH_rej & dd1=1 & loc=SWL → br follow,5.957892431064119,102,0.09404222699564943,0.4523297879116483,2/4,limited,True
+201202,8,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWL_rej & loc=SWL & macdh=1 → br follow,5.9157678013026835,1935,-0.08034311388218655,-3.133523665464464,0/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_bb_uh → h12 follow,5.9074450159864655,1392,0.08095807856983164,0.8478352381356825,2/4,limited,True
+201202,8,combination (zone trigger),zone,True,False,H1,H1 AUDUSD Z_ASH_rej & dh4=-1 & dd1=1 & stz=0 → br follow,5.905249211913767,345,-0.041493946764216846,-0.7645973878946378,0/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_bb_lh → br fade,5.877926756025595,2743,-0.10904921392807952,-2.896961380459508,0/4,limited,False
+201202,8,combination (zone trigger),zone,True,True,H1,H1 POOL Z_PDH_at & dd1=1 & rsiz=3 → br fade,5.809252967285901,1047,-0.01964527664536649,-0.6580595545078051,2/4,limited,False
+201202,8,combination (zone trigger),zone,True,True,H1,H1 POOL Z_PWH_rej & dh4=1 & rsiz=1 → h24 follow,5.781524174893911,2367,-0.07608347689239855,-1.3460961525322852,1/4,limited,False
+201202,8,indicator,indicator,False,False,H4,H4 CADJPY I_rsi_30_50 → h12 fade,5.7714133099887155,1262,-0.13415459024724366,-1.2680308835419367,0/4,limited,False
+201202,8,combination (zone trigger),zone,True,False,H1,H1 NZDJPY Z_SWL_rej & loc=SWL & stz=-1 → h24 follow,5.770902365865751,767,-0.10893883778498091,-1.150337721839873,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dd1=0 → br follow,7.148577612222698,2649,0.010272874661373492,0.523563835548932,2/4,limited,True
+200608,9,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASL_rej & dh4=1 & dd1=1 & stz=0 → br fade,6.883179447910802,368,-0.01764610812850354,-0.3201858574989302,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PWL_rej & e200=1 & macdh=1 → br follow,6.253288837307306,663,-0.10750718928145983,-1.405768977039383,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dh4=1 & macdh=-1 → br follow,6.250639624715629,1836,-0.01992507709787888,-0.8617222515203499,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PWL_rej & e200=1 & macdh=1 → h24 follow,6.214997307478618,518,-0.368164317029493,-1.7020606066922521,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASL_rej & dh4=1 & dd1=1 & macdh=-1 → br fade,6.130822481986913,420,0.010147620864859125,0.19995318224549702,2/4,limited,True
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dd1=0 & macdh=-1 → br follow,5.955817507690995,1805,-0.02035972293350703,-0.8660508363289215,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dh4=1 → br follow,5.889812580051869,2136,-0.023983067463256784,-1.125842546526198,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_at & e200=-1 & loc=ASL & rsiz=1 → h4 follow,5.7672598453345545,1643,-0.03503594213944092,-1.4230738951634456,2/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPJPY Z_SWL_rej & dh4=-1 & rsi50=-1 → h24 fade,5.595332297458822,844,-0.05915272073097944,-0.6117701285621232,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H1,H1 POOL Z_R1_rej & dh4=1 & dd1=-1 & macdt=-1 → h4 fade,5.579099883968197,2398,0.019529693209182786,0.7903095653360375,2/4,limited,True
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPUSD Z_ASH_at & macdh=1 → br fade,5.557616840295562,2614,-0.005421156921528561,-0.2953304431085098,2/4,limited,False
+200608,9,indicator,indicator,False,False,H4,H4 GBPJPY I_bb_below → h24 fade,5.459784321446406,489,-0.1090523616866254,-0.4049304486022583,2/4,limited,False
+200608,9,indicator,indicator,False,True,H4,H4 POOL I_rsi_30_50 → h24 fade,5.4492664096531875,14271,-0.1133505922016212,-1.8659674166845681,0/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_at & dd1=0 & rsiz=1 → br follow,5.417845272937609,1948,-0.024771574136251903,-1.1135325372448104,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_rej & loc=PWH & stz=0 → h12 fade,5.404192683816152,1721,-0.12970975215971303,-1.2709108267523122,1/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 EURUSD Z_SWL_at & e200=-1 & stz=0 → h12 follow,5.394368929462124,2112,-0.055783337858139735,-1.2913090911604757,0/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H1,H1 POOL Z_SWL_at & dd1=1 & e200=-1 & rsi50=-1 → h12 follow,5.354875085599957,10065,-0.048897706574648876,-2.5694490829426675,0/4,limited,False
+200608,9,combination (zone trigger),zone,True,True,H1,H1 POOL Z_PDL_rej & e200=-1 & loc=SWH & macdh=1 → br follow,5.33346503003316,1021,-0.08938588396675502,-2.681485578417314,0/4,limited,False
+200608,9,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_PP_rej & dd1=1 & loc=SWL → br follow,5.32396843542638,557,-0.1166502736723128,-2.914879196544256,0/4,limited,False
+201608,10,indicator,indicator,False,False,H1,H1 AUDUSD I_rsi_gt70 → h12 fade,7.261658285045151,1186,0.04300765764399588,0.8495578186244277,1/4,limited,True
+201608,10,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_PDL_at & dd1=0 & e200=-1 & macdt=1 → h12 fade,7.063945529732056,312,-0.07468766909005886,-0.8229190299491664,1/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 USDCHF Z_PP_rej & dd1=-1 & e200=1 & macdh=-1 → br fade,6.907036226327829,416,-0.045927572523267735,-1.0528146666469802,1/4,limited,False
+201608,10,indicator,indicator,False,False,H1,H1 AUDUSD I_rsi_gt70 → h24 fade,6.755975168245258,896,0.06064023521431212,0.7349851246346096,1/4,limited,True
+201608,10,combination (trendline trigger),trendline,True,False,M15,M15 EURAUD T_a_e4 & dd1=0 & e200=1 & macdt=-1 → tb fade,6.355078392438714,492,-0.03420491634261058,-0.673685769898339,2/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 USDCHF Z_PP_rej & e200=1 & macdh=-1 → br fade,6.350121365361987,1740,-0.06889380902983473,-3.1552978994839997,0/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_at & dh4=-1 & dd1=-1 & loc=SWL → br fade,6.347456311119459,790,-0.06104593714372219,-1.7322673099717008,2/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 EURGBP Z_PDL_at & dd1=0 & e200=-1 & macdt=1 → h24 fade,5.858354566220344,276,0.040733818216121126,0.30212785326514024,3/4,limited,True
+201608,10,combination (candle trigger),candle,True,False,H1,H1 EURCHF C_maru & macdt=-1 → br fade,5.5080779122971295,3982,0.044383090146264174,2.4850458832735063,4/4,limited,True
+201608,10,combination (zone trigger),zone,True,False,H1,H1 NZDUSD Z_SWH_rej & dh4=-1 & dd1=0 & macdt=-1 → h12 follow,5.48935430897378,290,-0.2061961615329594,-1.8337266062342723,0/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 NZDJPY Z_SWL_at & dd1=-1 & rsi50=-1 → br follow,5.395179450874793,1297,-0.0358205422937643,-1.2340489420293763,1/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 AUDJPY Z_PDH_rej & dh4=1 & e200=-1 & macdt=-1 → h24 fade,5.388023099859921,55,0.1257666307147732,0.3882735151346957,2/4,limited,True
+201608,10,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PP_rej & dd1=1 & macdh=1 → h24 follow,5.384698383816256,3780,-0.009886018165900649,-0.11724544667248918,2/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 USDCAD Z_SWH_at & dh4=0 & stz=0 → br follow,5.380635384926514,2552,-0.0039033085152951627,-0.20174514994194737,1/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_at & dd1=-1 & stz=1 → br fade,5.370003111965656,225,-0.07741780560144558,-1.2594240497905547,0/4,limited,False
+201608,10,combination (zone trigger),zone,True,False,H1,H1 USDJPY Z_SWH_at & dh4=1 & e200=1 & rsiz=2 → h24 fade,5.30524208103054,712,0.14189680768571766,1.4758965696463089,4/4,limited,True
+201608,10,combination (zone trigger),zone,True,False,H4,H4 EURGBP Z_SWL_rej & macdh=-1 → h24 follow,5.262458559018811,514,-0.44934890378958436,-1.996989955686954,1/4,limited,False
+201608,10,indicator,indicator,False,False,H4,H4 USDJPY I_rsi_gt70 → h12 follow,5.209875225965271,355,0.3523545618072814,1.7550378519911527,3/4,limited,True
+201608,10,combination (candle trigger),candle,True,False,H1,H1 EURAUD C_pin & dd1=-1 & loc=SWL → br follow,5.178306009767658,552,-0.055142455300002606,-1.322003854480137,1/4,limited,False
+201608,10,combination (zone trigger),zone,True,True,H4,H4 POOL Z_PWL_rej & loc=SWL & macdh=-1 → br follow,5.1778698902123885,3650,-0.04792085800974065,-1.479548291820833,0/4,limited,False
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_rej & dd1=1 & loc=SWH → h24 fade,9.911061649992465,75,-1.9256970478540445,-3.016699926330598,0/3,limited,False
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_rej & dh4=0 & dd1=1 & stz=0 → h24 fade,9.361667768070577,91,-1.1437925435210101,-2.2267686882096474,0/3,limited,False
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_rej & dd1=1 & stz=0 → h24 fade,9.351645551641973,158,-0.7934239148565128,-1.8380522837425437,0/3,limited,False
+202108,11,indicator,indicator,False,False,H4,H4 GBPCHF I_bbsq → h12 follow,9.04908578294919,500,0.11986243548768699,0.7528709351260104,3/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H1,H1 NZDUSD Z_ASH_at & dd1=0 & macdt=1 → h24 fade,8.002672831322585,648,0.008028817625596665,0.08225535789496174,2/4,limited,True
+202108,11,time,time,False,False,H1,GBPCHF F1_h18 long/follow,7.123107871357151,4348,0.03794717523853249,7.639475012630713,2/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H1,H1 NZDUSD Z_ASH_at & dd1=0 → h24 fade,6.760706584059137,780,0.05105262250968939,0.5796331010430887,3/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H1,H1 NZDUSD Z_ASH_at & dd1=0 & rsiz=2 → h24 fade,6.720394806024132,696,0.06655696907884584,0.7225624851092957,3/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_rej & dd1=0 & stz=0 → h24 follow,6.482979997628486,1032,0.08063572265232506,1.0228409197712574,2/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_at & dh4=0 & dd1=1 & loc=SWL → h24 fade,6.398144183807558,104,-0.1080789680279224,-0.2125394051640091,1/3,limited,False
+202108,11,combination (zone trigger),zone,True,False,H1,H1 EURAUD Z_SWL_rej & dd1=0 → h24 follow,6.3378247117448225,1164,0.039353124572726605,0.5365148952205682,3/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_at & dh4=0 & dd1=1 & stz=0 → h24 fade,6.261480689922783,91,-0.32418458861314664,-0.5617365215459776,1/3,limited,False
+202108,11,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & loc=SWH & macdh=-1 → br fade,6.231467673087007,1012,-0.06421227319794301,-2.0686202621018706,0/4,limited,False
+202108,11,combination (trendline trigger),trendline,True,True,H1,H1 POOL T_a_any & e200=-1 & loc=SWL & macdt=1 → tt follow,6.153615394095274,1899,-0.042511915141236006,-0.8954677009940579,2/4,limited,False
+202108,11,combination (zone trigger),zone,True,False,H1,H1 NZDUSD Z_ASH_at & dd1=0 & macdh=1 → h24 fade,6.100039445511051,622,-0.04166832034598359,-0.4235845470721666,1/4,limited,False
+202108,11,combination (zone trigger),zone,True,True,H1,H1 POOL Z_SWH_rej & dh4=1 & loc=R1 & macdt=1 → h12 fade,5.94736379700906,1851,0.056502482024810695,1.3338898574151592,3/4,limited,True
+202108,11,combination (zone trigger),zone,True,True,H1,H1 POOL Z_S1_at & dh4=1 & loc=SWL & macdt=-1 → br follow,5.87419944593082,2589,-0.02690551638415932,-1.3621157471534555,1/4,limited,False
+202108,11,indicator,indicator,False,False,H4,H4 GBPCHF I_bbsq → h24 follow,5.652560429020879,384,0.04248089137960911,0.12435894496212657,2/4,limited,True
+202108,11,indicator,indicator,False,False,H4,H4 GBPCHF I_bbsq → br follow,5.607512496475696,934,0.049075164927489506,0.858907352244354,2/4,limited,True
+202108,11,combination (zone trigger),zone,True,False,H4,H4 XAUUSD Z_SWL_rej & dd1=1 & macdh=-1 → h24 fade,5.571988159444391,149,-0.7406896965567653,-1.8034212649862684,0/3,limited,False
+200805,12,combination (zone trigger),zone,True,False,H4,H4 NZDUSD Z_SWL_rej & dd1=0 & rsi50=1 → h12 fade,6.588552762251755,192,-0.1761423870489387,-0.7050209850087089,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_ASH_rej & e200=1 & macdh=-1 → br follow,6.252200222465684,1239,-0.028137012011202202,-1.0783793254022462,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H4,H4 NZDUSD Z_SWL_rej & dd1=0 → h12 fade,6.061092119542854,384,-0.05300759471614819,-0.29287951006412827,2/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 AUDUSD Z_SWH_at & dh4=0 & e200=-1 & loc=SWH → br follow,6.019281186401923,1158,-0.017846555298241737,-0.6175887432644477,2/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 AUDUSD Z_SWL_at & dd1=1 & macdt=1 → br fade,5.902297521019046,1271,-0.04041806347180336,-1.4434790949321512,0/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 USDJPY Z_PDL_rej & e200=-1 & macdh=1 → h12 follow,5.873221896890293,485,-0.10970899570353765,-1.1681196482270468,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWL_rej & dh4=1 & dd1=1 & macdh=-1 → br follow,5.861226743385854,395,-0.13465827171350195,-2.5246520853406165,0/4,limited,False
+200805,12,indicator,indicator,False,False,H4,H4 GBPCHF I_ema200 → h24 fade,5.785927427297425,1120,0.20508720554713103,1.2084407062823237,3/4,limited,True
+200805,12,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_SWL_rej & loc=SWH & rsiz=1 → h24 fade,5.762839741762453,565,-0.13127856136389301,-1.1694100380174508,2/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 NZDJPY Z_SWH_rej & e200=-1 & rsi50=-1 → h4 fade,5.6733821303963055,1318,-0.048512770013194394,-1.6739474376841257,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & dd1=-1 & macdh=-1 → h12 follow,5.661293540518371,902,0.05095570842315467,0.7992818692856904,2/4,limited,True
+200805,12,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & dd1=-1 & loc=none & stz=0 → h24 follow,5.605076164229154,353,0.17396935652918183,1.1726595918153988,3/4,limited,True
+200805,12,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWL_rej & dd1=-1 & stz=-1 → h12 follow,5.558810976003982,434,-0.02628994415186399,-0.30708621026211463,3/4,limited,False
+200805,12,indicator,indicator,False,True,H4,H4 POOL I_cloud → h24 fade,5.4793067939741915,18172,-0.03566980740471312,-0.6988191838236556,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 GBPCHF Z_SWH_at & dd1=0 → br follow,5.4498694650197645,2722,-0.006709037546580475,-0.34650100474531037,2/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H4,H4 USDCAD Z_SWL_at & dh4=-1 → h4 follow,5.410506826144682,858,-0.04667938386909909,-0.6624936057162523,1/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 EURJPY Z_SWL_rej & e200=1 & rsiz=1 → br follow,5.406237305230119,1641,-0.023419907441298744,-1.0251886102960057,1/4,limited,False
+200805,12,zone,zone,False,False,H4,H4 CADJPY Z_PDL_rej → br follow,5.3811290589961445,1413,-0.04624989945502965,-0.9103396395613588,2/4,limited,False
+200805,12,combination (zone trigger),zone,True,False,H1,H1 AUDNZD Z_PDH_rej & dh4=1 & dd1=1 & stz=0 → h12 fade,5.342399126988455,171,0.10823583357031323,0.8557025323710222,3/4,limited,True
+200805,12,indicator,indicator,False,True,H4,H4 POOL I_adx_gt25 → h24 fade,5.291537592884517,12023,-0.07090922599854609,-1.4343846392540154,1/4,limited,False

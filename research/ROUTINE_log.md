@@ -58,3 +58,17 @@ Both round-0 results reported to user. Committed 00efb58 (local; push blocked).
 ## Round 6 (user 2026-11-04): refine E2 with (1) HTF environment, (2) day-of-week/calendar, (3) extra indicators. Selection 2005-2014, validation 2015-2024 (frozen choice in out/r6_frozen.json before validation). Max 2 filters. Output out/r6_report.md, r6_EA.mq5.
 
 ## Round 6 result: one filter frozen on 2005-14 (skip month-end Gotobi), CONFIRMED on 2015-24 (sum/DD 2.02->3.78). Final rule N~1260, +6.2 pips, t 4.6. Caveats: drop top5% -> +0.6 pips t 0.5 (fat-tail dependent); month-end weakness seen earlier (partial contamination). EA updated InpSkipMonthEndG=true.
+
+## Round 7 (user 2026-11-04): Method 1 = Gotobi-eve excl. month-end (r6). Goal: 3 methods to compare.
+Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed feature library -> top-10 candidates ->
+ confirm on all other 2005-2021 months (0.5 pip; t>=3.2; >=3/4 blocks positive) -> if confirmed: develop (filters chosen 2005-14, checked 2015-21)
+ -> ONE-SHOT final holdout 2022-2024 (untouched by discovery/confirmation/development). Stop at 2 new methods or 12 months.
+ State/checkpoints: out/r7_state.json, out/r7_loop_log.md. Then compare methods 1-3 + combined portfolio.
+ Round 7 update (user): library v2 = v1 + candle patterns, indicators (RSI/Stoch/MACD/EMA/BB/ADX/CCI/Ichimoku/PSAR), horizontal zones (PDH/PDL, PWH/PWL, Asia range, pivots, swing clusters), Dow structure (H4/D1), combinations context x location x trigger [x indicator], per-pair and pooled. Top-20/month, confirm t>=3.5, pooled >=60% pairs.
+ Round 7 update (user): add family T = counter-trendline break (pullback line through descending swing highs in an H4/D1 uptrend, close above by 0.1 ATR within 30 bars -> follow trend; mirror). H1 and M15; 2-touch and 3-touch; usable as combo trigger.
+## Round 7 result: NO new method accepted. Report out/r7_report.md (JP), log out/r7_loop_log.md, state out/r7_state.json (+ r7_v1_state.json).
+ Library v1 (F1-F9, top10, t>=3.2): 2 months (2012-03, 2021-07), 20 tests, 3 confirmed = all 16-18 EST hour buckets (AUDNZD short 16h, EURAUD long 17h, GBPCHF short 16h);
+  2 promoted, holdout looked once each (passed numerically) -> REJECTED: bid-only rollover artifact (bid dips 1.3-3.5 pips at 17:00 EST on crosses). Files renamed r7_v1_method2/3_*.
+ Library v2 (user spec change: +C/I/Z/D/T/combos, pooled 17 FX, top20, t>=3.5, pooled >=60% pairs) + rollover rule (no fills 16:55-17:30 EST), daily-clustered t:
+  12 months (same seed-42 order), 240 tests, 0 confirmed; 68/240 positive in confirmation, median t -0.67. T family (counter-trendline) descriptive 2005-21: negative even gross.
+ Total confirmation tests 260; holdout looks 2 (both v1 artifacts). Comparison = method 1 only (r7_compare.png). No EA.
