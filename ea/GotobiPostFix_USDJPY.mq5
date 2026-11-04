@@ -8,7 +8,8 @@
 //|   SELL at 09:55 JST on G (Tokyo fix), CLOSE at 15:00 JST on G.   |
 //|   Size: risk InpRiskPercent of equity per 1R,                    |
 //|         R = InpRiskATRMult x ATR(14) of the last closed D1 bar.  |
-//|   Backtest used NO stop.                                         |
+//|   Stop: 1R above entry (pre-registered choice, r11_m2_stop_report)|
+//|   = about 20 pips; caps intervention-day losses (2011: -343 pips).|
 //| Result 2005-2021 (screen): N 1294, +2.9 pips/trade, t 3.20;      |
 //|   2022-2024 (one look): N 232, +5.8 pips; 2005-2024 t 3.46.      |
 //| Runs next to method 1 (GotobiEve_USDJPY.mq5): method 1 closes    |
@@ -35,7 +36,7 @@ input string        InpExtraHolidays      = "";       // Extra JP non-business d
 //--- risk
 input double        InpRiskPercent        = 0.25;     // % of equity per 1R (no stop) or at the stop (stop set)
 input double        InpRiskATRMult        = 0.25;     // R = this x ATR(14, D1)
-input double        InpStopR              = 0.0;      // Stop in R (0 = no stop, as backtested)
+input double        InpStopR              = 1.0;      // Stop in R above entry (1.0 = chosen in r11_m2_stop; 0 = no stop)
 input double        InpFixedLots          = 0.0;      // >0: fixed lots instead of risk sizing
 input double        InpMaxSpreadPips      = 1.5;      // Skip entry if spread > this (pips); spread widens around 09:53-09:55
 input int           InpSlippagePoints     = 20;       // Max deviation (points)
@@ -274,6 +275,9 @@ void Process()
 //    cost 0.5 pip round trip, no swap (the hold does not cross the NY rollover), no slippage.
 //    Real FXCM bid/ask 2012-2024: paid spread 0.2-0.5 pip; result +4.5 pips/trade. Retail reports show 0.5-2 pip slippage
 //    per leg at 09:55; the backtest edge (~3-6 pips/trade) is about used up at ~4 pips of extra round-trip cost.
+// 8. Stop (InpStopR=1): with a stop, InpRiskPercent is the loss AT the stop; lot size is the same as R-sizing
+//    without a stop. 2005-21: 25% of trades stopped, mean kept at 93%; worst trade -1.08R in M5 data.
+//    Real fills during interventions can slip far beyond the stop (M5 data cannot show this).
 // 5. Results depend on a few large trades (mean without the top 5% of trades is slightly negative). Use small risk.
 // 6. One position per symbol/magic. A missed entry window (no tick, spread > InpMaxSpreadPips) skips that Gotobi day.
 // 7. With method 1 on the same account: use a hedging account (the long close and the short open both happen at 09:55).
