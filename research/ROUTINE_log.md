@@ -36,3 +36,11 @@ Both round-0 results reported to user. Committed 00efb58 (local; push blocked).
 ## Round 3 result (FINAL): FAIL 4/4. Data: GRXEUR 2020-06-15..2023-12-01 is Euro Stoxx 50 (excluded for EURUSD in H-B); AUDJPY 2012 gap handled (pair unavailable).
  H-A a: cells A +1.2/+0.8 B -0.4/-0.2 %, t 0.16, ret/DD 0.02, worse than B&H (SR A 0.12 vs 0.31). b negative. Risk-off days were the BEST days for JPY carry.
  H-B a: avgR -0.039 t -1.27 (gross -0.010R); b: -0.004 t -0.05; 1/4 pairs +. No EA. Report out/r3_report.md. 3-iteration limit reached.
+
+## Loop finished after round 3 (max). Final verdict: no candidate. FINAL_SUMMARY.md committed.
+
+## Round 4 (extra round requested after loop end; site-review hypotheses): FAIL 8/8. Report out/r4_report.md (JP).
+ S1 night M5 scalping 17:30-18:45 EST, RSI/BB x mid/ATR exits, 17 pairs, baseline cost x2: gross +1.1..+2.2 pips/trade (t 18-41) but net <0 already at x1
+  (break-even 0.49-0.88x cost); x2 avgR -0.23..-0.38, 0/6 cells, <=1/17 pairs. Gross edge concentrated 17:30-17:55 (rollover; bid-only artifact likely). Placebo 08-11 EST ~0 gross.
+ S2 Tokyo fix USDJPY (cost x1=1.0pip): a -0.004R; b goto-bi +0.039R t2.40, 3 periods +, ratio 2.47 (<3), x2 -0.010 -> FAIL (closest; passes 1-3 only if cost<=0.7pip);
+  c -0.020; c2 +0.006. Gross effect also in EURJPY/AUDJPY. No filters/portfolio/EA (nothing passed).
