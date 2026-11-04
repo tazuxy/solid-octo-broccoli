@@ -95,3 +95,4 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
  FXCM real bid/ask 2012-24 +4.5 pips. Caveats: drop-top5% -0.03R; overlaps round-4 c2 window (2022-24 seen for c2). EA ea/GotobiPostFix_USDJPY.mq5.
 ## Method 2 exits (2026-11-04): stop grid -> 1R chosen (worst trade -343 -> -71 pips, mean kept 93%); TP grid 0/5 adopted; conditional exit at +1R (6 features) 0/6 adopted.
 ## Round 12 (2026-11-04): 1R stop applied to round-10 near misses H1/H2/H3 (screen t>=3.0): all FAIL (t_day 1.97 / 2.05 / 1.24); stop hit 54-66% (too tight for 12-24h holds). 2022-24 not looked at.
+## Round 13 (2026-11-04): chart patterns (causal 2*ATR zigzag; double top/bottom & H&S; H4/D1; 17 FX + gold; textbook stop/target/60-bar exit): all 4 FAIL (t -1.5..0.8). 2022-24 not looked at.
