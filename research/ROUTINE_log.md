@@ -77,3 +77,12 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
 ## Round 8 result (2026-11-04): NO new method. 8 year-windows (2017,2021,2018,2007,2008,2012,2015,2009), 160 tests, 0 confirmed, 0 holdout looks.
  Only t>=3.4: GBPCHF 18h long (2021; t 4.7, 2/4 blocks, all P&L at rollover-adjacent 18h). Hit rate: positive 41% (r7 28%), median t -0.46 (r7 -0.67), t>2 3/160.
  Report out/r8_report.md (JP), log out/r8_loop_log.md, state out/r8_state.json, diag out/r8_diag.md, candidates out/r8_candidates.csv, compare out/r8_compare.png (method 1 only).
+
+## Round 10 (2026-11-04, new session): 6 pre-registered hypotheses, revised criteria A (r9c ch.6). Report round10/r10_report.md.
+ Data: histdata re-fetched by direct HTTPS (research/fetch_data.sh, 426 zips, sizes in data_sizes.tsv); +11 crosses (AUDCAD NZDCAD ...) in bars_x;
+ FXCM public M1 bid/ask 2012-2024 (candledata.fxcorporate.com) for real spreads (Dukascopy throttled to ~7 s/file -> abandoned; amendment logged before H6 ran).
+ H1 FOMC-day short USD (7 pairs) +0.47R t_trade 4.57 but t_day 2.10 -> FAIL; H2 pre-FOMC JPY-cross long t_day 2.03 FAIL; H3 Gotobi-eve JPY crosses t_day 2.38 FAIL (corr 0.62 with method 1);
+ H4 AUDCAD/NZDCAD/AUDNZD M15 Asian BB+RSI fade ~0 gross FAIL; H5 same crosses D1 z>2 fade t 0.44 FAIL;
+ H6 round-4 S1 RSI/mid night scalp on REAL bid/ask 2012-21: mid +0.65 pips, real -0.05 pips (cost mean 0.69), t -0.2 FAIL -> r4b "formal pass" was a bid-only artifact.
+ Screen passes 0 -> 2022-2024 NOT looked at. Spreads: 16:00-17:30 EST several x wider (2022-24 EURUSD 1.6, AUDNZD 5.8 pips); crosses 0.5-1.0 pips intraday.
+ New unused data: FXCM 2025-2026 bid/ask (could be a fresh forward check of method 1; not used yet, user to decide).
