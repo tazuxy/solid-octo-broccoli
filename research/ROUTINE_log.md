@@ -96,3 +96,6 @@ Pipeline: random 1-month discovery (2005-2021 pool, seed 42) -> scan fixed featu
 ## Method 2 exits (2026-11-04): stop grid -> 1R chosen (worst trade -343 -> -71 pips, mean kept 93%); TP grid 0/5 adopted; conditional exit at +1R (6 features) 0/6 adopted.
 ## Round 12 (2026-11-04): 1R stop applied to round-10 near misses H1/H2/H3 (screen t>=3.0): all FAIL (t_day 1.97 / 2.05 / 1.24); stop hit 54-66% (too tight for 12-24h holds). 2022-24 not looked at.
 ## Round 13 (2026-11-04): chart patterns (causal 2*ATR zigzag; double top/bottom & H&S; H4/D1; 17 FX + gold; textbook stop/target/60-bar exit): all 4 FAIL (t -1.5..0.8). 2022-24 not looked at.
+## Round 14 (2026-11-04): method 2 on unused 2000-04 +0.186R t 2.94 (consistent); holiday/BoJ skips rejected; method 1 stop grid -> 8R disaster stop. EA: 0.15%/R, 2.5% hard cap, Monday half lot.
+## Round 15 (2026-11-04): ORZ blog (666 posts) MTF entries: O1 H1/M5 pullback -0.097R t -4.9, O2 H4/M15 -0.003R, O3 H1/M5 range reversal -0.134R: FAIL;
+ O4 method 2 with M5 confirmation: per-day mean 0.137 -> 0.012 (2005-16): FAIL (immediate 09:55 sell is better).
