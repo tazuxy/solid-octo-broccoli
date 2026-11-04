@@ -1,0 +1,109 @@
+dist,N,set,fpr
+bracket,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.0085
+bracket,300,"R2 one-shot (a,b,c,d,e)",0.00585
+bracket,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.00025
+bracket,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.0005
+bracket,300,"R5 pooled (+drop5,+delay)",0.0005
+bracket,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.00115
+bracket,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.0071
+bracket,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.00065
+bracket,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.0003
+bracket,300,R7v2 confirm pooled (+60% pairs),0.0003
+bracket,300,"R8 confirm single (t>=3.4,blk3/4,x2)",0.0004
+bracket,300,R8 confirm + holdout accept,0.0001
+bracket,300,"PROP screen t>=2.5 (blk2/4,x1.5)",0.0048
+bracket,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.0219
+bracket,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.00095
+bracket,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.001
+bracket,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.00265
+bracket,300,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.00015
+bracket,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.00915
+bracket,1000,"R2 one-shot (a,b,c,d,e)",0.00665
+bracket,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.0001
+bracket,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.00055
+bracket,1000,"R5 pooled (+drop5,+delay)",0.00025
+bracket,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.00055
+bracket,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.0036
+bracket,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.0005
+bracket,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.00015
+bracket,1000,R7v2 confirm pooled (+60% pairs),0.00015
+bracket,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.00025
+bracket,1000,R8 confirm + holdout accept,0.00015
+bracket,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.00585
+bracket,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.02245
+bracket,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.00095
+bracket,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.0011
+bracket,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.0024
+bracket,1000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.0001
+bracket,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.0091
+bracket,5000,"R2 one-shot (a,b,c,d,e)",0.0061
+bracket,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.0
+bracket,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.0006
+bracket,5000,"R5 pooled (+drop5,+delay)",0.0
+bracket,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.0
+bracket,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.00035
+bracket,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.00025
+bracket,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.0001
+bracket,5000,R7v2 confirm pooled (+60% pairs),0.0001
+bracket,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.00015
+bracket,5000,R8 confirm + holdout accept,0.0001
+bracket,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.00595
+bracket,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.0217
+bracket,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.00085
+bracket,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.001
+bracket,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.0022
+bracket,5000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.0001
+fix,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.0105
+fix,300,"R2 one-shot (a,b,c,d,e)",0.0071
+fix,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.00055
+fix,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.00125
+fix,300,"R5 pooled (+drop5,+delay)",0.00125
+fix,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.002
+fix,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.0111
+fix,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.0008
+fix,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.00025
+fix,300,R7v2 confirm pooled (+60% pairs),0.00025
+fix,300,"R8 confirm single (t>=3.4,blk3/4,x2)",0.00045
+fix,300,R8 confirm + holdout accept,0.00025
+fix,300,"PROP screen t>=2.5 (blk2/4,x1.5)",0.00675
+fix,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.0241
+fix,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.00145
+fix,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.00145
+fix,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.0028
+fix,300,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.00015
+fix,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.00935
+fix,1000,"R2 one-shot (a,b,c,d,e)",0.007
+fix,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.00025
+fix,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.00095
+fix,1000,"R5 pooled (+drop5,+delay)",0.0001
+fix,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.0001
+fix,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.00575
+fix,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.00065
+fix,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.00025
+fix,1000,R7v2 confirm pooled (+60% pairs),0.00025
+fix,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.00035
+fix,1000,R8 confirm + holdout accept,5e-05
+fix,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.0072
+fix,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.0228
+fix,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.0009
+fix,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.00115
+fix,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.00255
+fix,1000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.0001
+fix,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.0088
+fix,5000,"R2 one-shot (a,b,c,d,e)",0.00605
+fix,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.0001
+fix,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.0006
+fix,5000,"R5 pooled (+drop5,+delay)",0.0
+fix,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.0
+fix,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.0007
+fix,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.0005
+fix,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.00015
+fix,5000,R7v2 confirm pooled (+60% pairs),0.00015
+fix,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.0003
+fix,5000,R8 confirm + holdout accept,0.0001
+fix,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.006
+fix,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.02135
+fix,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.00105
+fix,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.00115
+fix,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.00295
+fix,5000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.0001

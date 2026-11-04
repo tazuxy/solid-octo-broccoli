@@ -1,0 +1,262 @@
+dist,N,set,edge_50,edge_80
+bracket,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.23471295060080108,0.2947930574098798
+bracket,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.23140939597315435,0.29181208053691277
+bracket,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.24399293286219081,
+bracket,300,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.2908805031446541,
+bracket,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.16265060240963855,0.2362694300518135
+bracket,300,"PROP screen t>=2.5 (blk2/4,x1.5)",0.2,0.27550335570469797
+bracket,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.20870370370370372,0.29203703703703704
+bracket,300,"R2 one-shot (a,b,c,d,e)",0.25728744939271253,
+bracket,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.2985663082437276,
+bracket,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.19569190600522193,0.2752707581227437
+bracket,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.2741407528641571,
+bracket,300,"R5 pooled (+drop5,+delay)",0.2741407528641571,
+bracket,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.24283727399165508,
+bracket,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.25549374130737135,
+bracket,300,R7v2 confirm pooled (+60% pairs),0.2795321637426901,
+bracket,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.2794160583941606,
+bracket,300,R8 confirm + holdout accept,0.2864253393665158,
+bracket,300,"R8 confirm single (t>=3.4,blk3/4,x2)",0.2721590909090909,
+bracket,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.12853810264385693,0.17283464566929135
+bracket,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.1264705882352941,0.1701657458563536
+bracket,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.1344017094017094,0.1976489028213166
+bracket,1000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.16240188383045526,0.19772370486656202
+bracket,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.08725536992840097,0.13028953229398663
+bracket,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.11208609271523179,0.14933774834437086
+bracket,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.11563106796116505,0.16627118644067798
+bracket,1000,"R2 one-shot (a,b,c,d,e)",0.14048223350253805,0.19986702127659578
+bracket,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.17587209302325582,0.24446902654867256
+bracket,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.12197712418300655,0.16646153846153847
+bracket,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.15242825607064017,0.20646258503401366
+bracket,1000,"R5 pooled (+drop5,+delay)",0.1619,0.22005813953488376
+bracket,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.1458916083916084,0.18927875243664719
+bracket,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.141437802907916,0.1844
+bracket,1000,R7v2 confirm pooled (+60% pairs),0.15539130434782608,0.1945217391304348
+bracket,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.1553135888501742,0.19451219512195123
+bracket,1000,R8 confirm + holdout accept,0.16119005328596803,0.20433333333333337
+bracket,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.15114840989399295,0.1909010600706714
+bracket,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.0575085324232082,0.07711864406779663
+bracket,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.056678023850085184,0.0753474320241692
+bracket,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.060133928571428574,0.09026548672566373
+bracket,5000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.07125000000000001,0.09208333333333334
+bracket,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.03945652173913044,0.0585945945945946
+bracket,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.049610136452241715,0.06676190476190477
+bracket,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.05231441048034935,0.07454545454545455
+bracket,5000,"R2 one-shot (a,b,c,d,e)",0.06217391304347827,0.09204081632653063
+bracket,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.0916923076923077,0.12475442043222004
+bracket,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.06818947368421054,0.08985365853658538
+bracket,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.06828571428571428,0.09366602687140116
+bracket,5000,"R5 pooled (+drop5,+delay)",0.1423481308411215,0.1759771986970684
+bracket,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.1422987164527421,0.17593800978792823
+bracket,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.06409448818897638,0.08610017889087657
+bracket,5000,R7v2 confirm pooled (+60% pairs),0.07008875739644972,0.09005917159763314
+bracket,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.07008875739644972,0.09005917159763314
+bracket,5000,R8 confirm + holdout accept,0.073982683982684,0.09346320346320347
+bracket,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.0683265306122449,0.0890232558139535
+fix,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",,
+fix,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",,
+fix,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",,
+fix,300,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",,
+fix,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.21673553719008265,
+fix,300,"PROP screen t>=2.5 (blk2/4,x1.5)",0.2725099601593626,
+fix,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.2778494623655914,
+fix,300,"R2 one-shot (a,b,c,d,e)",,
+fix,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",,
+fix,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.26311475409836066,
+fix,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",,
+fix,300,"R5 pooled (+drop5,+delay)",,
+fix,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+fix,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",,
+fix,300,R7v2 confirm pooled (+60% pairs),,
+fix,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",,
+fix,300,R8 confirm + holdout accept,,
+fix,300,"R8 confirm single (t>=3.4,blk3/4,x2)",,
+fix,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.17274368231046933,0.23709273182957394
+fix,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.17068661971830987,0.23162162162162164
+fix,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.17972103004291845,0.27885196374622356
+fix,1000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.2197982345523329,0.27654476670870115
+fix,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.12125000000000001,0.17728531855955681
+fix,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.15265848670756646,0.1986707566462168
+fix,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.15762331838565022,0.22215384615384617
+fix,1000,"R2 one-shot (a,b,c,d,e)",0.1816377171215881,0.2749379652605459
+fix,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.23074581430745816,0.29923896499238967
+fix,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.1607429718875502,0.2178247734138973
+fix,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.1994407158836689,0.2807622504537205
+fix,1000,"R5 pooled (+drop5,+delay)",0.23057851239669422,0.2925619834710744
+fix,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.21796875000000002,0.2765625
+fix,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.187888198757764,0.25761245674740485
+fix,1000,R7v2 confirm pooled (+60% pairs),0.2084507042253521,0.271830985915493
+fix,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.2084507042253521,0.271830985915493
+fix,1000,R8 confirm + holdout accept,0.21795620437956206,0.2836496350364963
+fix,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.2002980625931446,0.26736214605067066
+fix,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.07897280966767373,0.09936555891238671
+fix,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.07768518518518519,0.09851851851851852
+fix,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.0829438202247191,0.1267663043478261
+fix,5000,"PROP M: t>=3.5,blk2/4,x1.5 + holdout(mean>0, full t>=3)",0.09585106382978724,0.12952380952380954
+fix,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.05413953488372094,0.07928977272727274
+fix,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.06766497461928936,0.09207650273224045
+fix,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.06977653631284916,0.09753086419753088
+fix,5000,"R2 one-shot (a,b,c,d,e)",0.0834433962264151,0.12640586797066017
+fix,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.12029702970297029,0.14814356435643564
+fix,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.08570731707317074,0.11847058823529412
+fix,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.09214689265536724,0.1308531746031746
+fix,5000,"R5 pooled (+drop5,+delay)",0.23537532355478863,0.2742018981880932
+fix,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.23537532355478863,0.2742018981880932
+fix,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.0858039816232772,0.11647196261682245
+fix,5000,R7v2 confirm pooled (+60% pairs),0.09354948805460751,0.127
+fix,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.09350936967632027,0.12696160267111853
+fix,5000,R8 confirm + holdout accept,0.0972192513368984,0.13143759873617694
+fix,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.09071661237785017,0.12416356877323421
+h24,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",,
+h24,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",,
+h24,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",,
+h24,300,"PROP screen t>=2.0 (blk2/4,x1.5)",,
+h24,300,"PROP screen t>=2.5 (blk2/4,x1.5)",,
+h24,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",,
+h24,300,"R2 one-shot (a,b,c,d,e)",,
+h24,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",,
+h24,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",,
+h24,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",,
+h24,300,"R5 pooled (+drop5,+delay)",,
+h24,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+h24,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",,
+h24,300,R7v2 confirm pooled (+60% pairs),,
+h24,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",,
+h24,300,R8 confirm + holdout accept,,
+h24,300,"R8 confirm single (t>=3.4,blk3/4,x2)",,
+h24,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",,
+h24,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",,
+h24,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",,
+h24,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",,
+h24,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",,
+h24,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",,
+h24,1000,"R2 one-shot (a,b,c,d,e)",,
+h24,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",,
+h24,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",,
+h24,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",,
+h24,1000,"R5 pooled (+drop5,+delay)",,
+h24,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+h24,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",,
+h24,1000,R7v2 confirm pooled (+60% pairs),,
+h24,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",,
+h24,1000,R8 confirm + holdout accept,,
+h24,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",,
+h24,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.22506082725060828,
+h24,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.21938775510204084,
+h24,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.24185393258426968,
+h24,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.14772036474164132,0.282648401826484
+h24,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.18657817109144545,
+h24,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.19430604982206406,
+h24,5000,"R2 one-shot (a,b,c,d,e)",0.2478589420654912,
+h24,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.2854651162790698,
+h24,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.18987730061349695,
+h24,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.2652777777777778,
+h24,5000,"R5 pooled (+drop5,+delay)",,
+h24,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+h24,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.24775828460038987,
+h24,5000,R7v2 confirm pooled (+60% pairs),0.26504347826086955,
+h24,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.26504347826086955,
+h24,5000,R8 confirm + holdout accept,0.2790613718411552,
+h24,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.26035714285714284,
+normal,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.16799628942486086,0.22770448548812666
+normal,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.164811320754717,0.22187500000000002
+normal,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.17319884726224785,0.26910994764397905
+normal,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.1157843137254902,0.16741379310344828
+normal,300,"PROP screen t>=2.5 (blk2/4,x1.5)",0.1443458980044346,0.1935589519650655
+normal,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.15024691358024692,0.21561461794019934
+normal,300,"R2 one-shot (a,b,c,d,e)",0.18250728862973764,0.2709677419354839
+normal,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.22355623100303953,0.2919452887537994
+normal,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.14557522123893807,0.1977855477855478
+normal,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.20052083333333334,0.27864583333333337
+normal,300,"R5 pooled (+drop5,+delay)",0.20052083333333334,0.27864583333333337
+normal,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.17442528735632185,0.2403973509933775
+normal,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.1830812854442344,0.25103578154425615
+normal,300,R7v2 confirm pooled (+60% pairs),0.20104790419161678,0.2684131736526946
+normal,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.20104633781763828,0.26831091180866967
+normal,300,R8 confirm + holdout accept,0.21179775280898877,0.275
+normal,300,"R8 confirm single (t>=3.4,blk3/4,x2)",0.19475806451612904,0.26248037676609104
+normal,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.09271084337349399,0.12937500000000002
+normal,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.09097560975609757,0.12796296296296295
+normal,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.09618705035971224,0.14563218390804597
+normal,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.06261780104712042,0.09294554455445546
+normal,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.08016326530612246,0.11578947368421054
+normal,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.08358620689655173,0.1247086247086247
+normal,1000,"R2 one-shot (a,b,c,d,e)",0.10077669902912623,0.14446601941747572
+normal,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.1297016861219196,0.16929577464788734
+normal,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.09105590062111801,0.12838589981447124
+normal,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.11155038759689923,0.1464341085271318
+normal,1000,"R5 pooled (+drop5,+delay)",0.12052287581699346,0.1499346405228758
+normal,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.11253164556962025,0.1410126582278481
+normal,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.10377492877492878,0.13582621082621082
+normal,1000,R7v2 confirm pooled (+60% pairs),0.11425925925925927,0.14203703703703704
+normal,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.11425925925925927,0.14203703703703704
+normal,1000,R8 confirm + holdout accept,0.11836228287841191,0.14627791563275433
+normal,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.11151898734177217,0.14
+normal,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.04160098522167487,0.05592391304347826
+normal,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.04090464547677262,0.054548104956268224
+normal,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.04334360554699538,0.06453416149068324
+normal,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.028859223300970877,0.043256578947368424
+normal,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.03693333333333334,0.04893333333333334
+normal,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.03813559322033898,0.05416666666666667
+normal,5000,"R2 one-shot (a,b,c,d,e)",0.04612903225806452,0.06673076923076923
+normal,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.06855500821018062,0.09026622296173045
+normal,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.051930379746835446,0.06617088607594937
+normal,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.04911864406779662,0.06672583826429981
+normal,5000,"R5 pooled (+drop5,+delay)",0.11648697214734952,0.1367026055705301
+normal,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",0.1164568345323741,0.1366906474820144
+normal,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.04528275862068966,0.0610934393638171
+normal,5000,R7v2 confirm pooled (+60% pairs),0.05015748031496064,0.06433070866141732
+normal,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.05012618296529969,0.0643217665615142
+normal,5000,R8 confirm + holdout accept,0.05170771756978654,0.06648604269293926
+normal,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.048249258160237396,0.063276740237691
+trend,300,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",,
+trend,300,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",,
+trend,300,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",,
+trend,300,"PROP screen t>=2.0 (blk2/4,x1.5)",0.2924024640657084,
+trend,300,"PROP screen t>=2.5 (blk2/4,x1.5)",,
+trend,300,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",,
+trend,300,"R2 one-shot (a,b,c,d,e)",,
+trend,300,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",,
+trend,300,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",,
+trend,300,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",,
+trend,300,"R5 pooled (+drop5,+delay)",,
+trend,300,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+trend,300,"R7v1 confirm (t>=3.2,blk3/4,x2)",,
+trend,300,R7v2 confirm pooled (+60% pairs),,
+trend,300,"R7v2 confirm single (t>=3.5,blk3/4,x2)",,
+trend,300,R8 confirm + holdout accept,,
+trend,300,"R8 confirm single (t>=3.4,blk3/4,x2)",,
+trend,1000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.24924812030075189,
+trend,1000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.2479349186483104,
+trend,1000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.24793741109530584,
+trend,1000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.17564102564102566,0.24670542635658918
+trend,1000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.22137834036568216,0.2846694796061885
+trend,1000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.21158989598811292,0.2784546805349183
+trend,1000,"R2 one-shot (a,b,c,d,e)",0.26170212765957446,
+trend,1000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.292259083728278,
+trend,1000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.1955919395465995,0.26444099378881986
+trend,1000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.28248847926267284,
+trend,1000,"R5 pooled (+drop5,+delay)",,
+trend,1000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+trend,1000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.2689295039164491,
+trend,1000,R7v2 confirm pooled (+60% pairs),0.2850274725274725,
+trend,1000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.2850274725274725,
+trend,1000,R8 confirm + holdout accept,0.2926829268292683,
+trend,1000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.2798927613941019,
+trend,5000,"PROP A: screen2.5 + holdout(mean>0, full t>=3)",0.12274678111587983,0.14688841201716737
+trend,5000,"PROP B: screen2.0 + holdout(mean>0, full t>=3)",0.12189507494646681,0.1459850107066381
+trend,5000,"PROP C: screen2.0 + holdout(t_h>=1, full t>=2.5)",0.12150145772594752,0.1612167300380228
+trend,5000,"PROP screen t>=2.0 (blk2/4,x1.5)",0.08582010582010582,0.11995614035087719
+trend,5000,"PROP screen t>=2.5 (blk2/4,x1.5)",0.11006211180124224,0.13801242236024847
+trend,5000,"R0-R1 (4cells,t>=2,ratio>=3,inst12/17)",0.10558958652373661,0.1400459418070444
+trend,5000,"R2 one-shot (a,b,c,d,e)",0.12554806070826308,0.17209944751381218
+trend,5000,"R4 S1 (at x2: 6cells,t>=3,ratio>=3,60%,x3>0)",0.1471139971139971,0.1843383584589615
+trend,5000,"R4/R4b S2 single (3per,t>=2,ratio>=3; same at x2)",0.10096439169139466,0.13434718100890208
+trend,5000,"R4b/R5 pooled (6cells,t>=3,ratio>=3,60%,x2>0)",0.13634639696586598,0.1754901960784314
+trend,5000,"R5 pooled (+drop5,+delay)",,
+trend,5000,"R5 single (3per,t>=3,ratio>=3,x2,drop5,delay)",,
+trend,5000,"R7v1 confirm (t>=3.2,blk3/4,x2)",0.1348235294117647,0.17025316455696204
+trend,5000,R7v2 confirm pooled (+60% pairs),0.15028169014084508,0.1819718309859155
+trend,5000,"R7v2 confirm single (t>=3.5,blk3/4,x2)",0.15028129395218004,0.1819268635724332
+trend,5000,R8 confirm + holdout accept,0.15007575757575758,0.18416666666666667
+trend,5000,"R8 confirm single (t>=3.4,blk3/4,x2)",0.144496644295302,0.1789308176100629
